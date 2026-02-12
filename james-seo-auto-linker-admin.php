@@ -534,7 +534,7 @@
                     <p style="margin: 0;">
                         <?php printf(
                             esc_html__('Running James SEO Auto Linker v%s', 'james-seo-auto-linker'),
-                            '<strong>2.0.0</strong>'
+                            '<strong>1.0</strong>'
                         ); ?>
                         &bull;
                         <?php printf(
