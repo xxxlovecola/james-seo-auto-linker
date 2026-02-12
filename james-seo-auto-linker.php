@@ -1,10 +1,8 @@
 <?php
 /*
 Plugin Name: James SEO Auto Linker
-Plugin URI: https://www.websitenazorg.nl
 Version: 1.0
-Author: WebsiteNazorg.nl
-Author URI: https://www.websitenazorg.nl
+Author: James Colin
 Description: James SEO Auto Linker inserts links on keywords automatically with optimized performance and security.
 */
 

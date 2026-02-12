@@ -1,10 +1,8 @@
 === James SEO Auto Linker ===
-Contributors: arjanolsder
+Contributors: James Colin
 Plugin Name: James SEO Auto Linker
-Plugin URI: https://www.websitenazorg.nl
 Tags:  post, posts, pages, tags, categories, comments, links, seo, google, automatic, link, cornerstone, RSS
-Author URI: https://www.websitenazorg.nl
-Author: WebsiteNazorg.nl
+Author: James Colin
 Requires at least: 5.6
 Tested up to: 6.7.1
 Stable tag: 1.0
