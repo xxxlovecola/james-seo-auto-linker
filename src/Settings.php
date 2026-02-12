@@ -38,6 +38,10 @@ class Settings
      */
     public function update(array $new_options): void
     {
+        if (empty($new_options)) {
+            return;
+        }
+
         $this->options = array_merge($this->options, $new_options);
         update_option($this->option_name, $this->options);
     }
