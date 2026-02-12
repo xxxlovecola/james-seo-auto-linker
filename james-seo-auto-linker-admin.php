@@ -128,6 +128,9 @@
                                             <strong><?php esc_html_e('Enable auto-linking in posts', 'james-seo-auto-linker'); ?></strong>
                                         </label>
                                         <br>
+                                        <p class="description">
+                                            <?php esc_html_e('Note: Posts will not link to themselves to prevent over-optimization.', 'james-seo-auto-linker'); ?>
+                                        </p>
                                     </fieldset>
                                 </td>
                             </tr>
@@ -146,6 +149,9 @@
                                             <strong><?php esc_html_e('Enable auto-linking in pages', 'james-seo-auto-linker'); ?></strong>
                                         </label>
                                         <br>
+                                        <p class="description">
+                                            <?php esc_html_e('Note: Pages will not link to themselves to prevent over-optimization.', 'james-seo-auto-linker'); ?>
+                                        </p>
                                     </fieldset>
                                 </td>
                             </tr>
