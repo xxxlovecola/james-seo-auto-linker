@@ -128,16 +128,6 @@
                                             <strong><?php esc_html_e('Enable auto-linking in posts', 'james-seo-auto-linker'); ?></strong>
                                         </label>
                                         <br>
-                                        <label for="postself">
-                                            <input 
-                                                type="checkbox" 
-                                                name="postself" 
-                                                id="postself" 
-                                                value="on"
-                                                <?php checked($postself, 'checked'); ?>
-                                            />
-                                            <?php esc_html_e('Allow posts to link to themselves', 'james-seo-auto-linker'); ?>
-                                        </label>
                                     </fieldset>
                                 </td>
                             </tr>
@@ -156,16 +146,6 @@
                                             <strong><?php esc_html_e('Enable auto-linking in pages', 'james-seo-auto-linker'); ?></strong>
                                         </label>
                                         <br>
-                                        <label for="pageself">
-                                            <input 
-                                                type="checkbox" 
-                                                name="pageself" 
-                                                id="pageself" 
-                                                value="on"
-                                                <?php checked($pageself, 'checked'); ?>
-                                            />
-                                            <?php esc_html_e('Allow pages to link to themselves', 'james-seo-auto-linker'); ?>
-                                        </label>
                                     </fieldset>
                                 </td>
                             </tr>

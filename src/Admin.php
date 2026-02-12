@@ -45,9 +45,7 @@ class Admin
 
         // Map names for the legacy template
         $post = ($options['post'] === 'on') ? 'checked' : '';
-        $postself = ($options['postself'] === 'on') ? 'checked' : '';
         $page = ($options['page'] === 'on') ? 'checked' : '';
-        $pageself = ($options['pageself'] === 'on') ? 'checked' : '';
         $comment = ($options['comment'] === 'on') ? 'checked' : '';
         $excludeheading = ($options['excludeheading'] === 'on') ? 'checked' : '';
         $lposts = ($options['lposts'] === 'on') ? 'checked' : '';
@@ -77,9 +75,7 @@ class Admin
 
         $this->settings->update([
             'post' => sanitize_text_field($_POST['post'] ?? ''),
-            'postself' => sanitize_text_field($_POST['postself'] ?? ''),
             'page' => sanitize_text_field($_POST['page'] ?? ''),
-            'pageself' => sanitize_text_field($_POST['pageself'] ?? ''),
             'comment' => sanitize_text_field($_POST['comment'] ?? ''),
             'excludeheading' => sanitize_text_field($_POST['excludeheading'] ?? ''),
             'lposts' => sanitize_text_field($_POST['lposts'] ?? ''),

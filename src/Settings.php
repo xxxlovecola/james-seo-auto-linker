@@ -49,9 +49,7 @@ class Settings
     {
         $defaults = [
             'post' => 'on',
-            'postself' => '',
             'page' => 'on',
-            'pageself' => '',
             'comment' => '',
             'excludeheading' => 'on',
             'lposts' => 'on',

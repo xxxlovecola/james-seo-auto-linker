@@ -68,12 +68,8 @@ class Processor
         $current_title = '';
         $current_url = '';
         if (!$is_comment && isset($post->post_type)) {
-            $prevent_self = ($post->post_type === 'page' && !$this->settings->get('pageself')) ||
-                ($post->post_type === 'post' && !$this->settings->get('postself'));
-            if ($prevent_self) {
-                $current_title = $this->settings->get('casesens') ? $post->post_title : strtolower($post->post_title);
-                $current_url = trailingslashit(get_permalink($post->ID));
-            }
+            $current_title = $this->settings->get('casesens') ? $post->post_title : strtolower($post->post_title);
+            $current_url = trailingslashit(get_permalink($post->ID));
         }
 
         // Settings
