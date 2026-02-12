@@ -134,15 +134,26 @@ class Processor
             }
 
             $regex = str_replace('$name', $keyword_escaped, $regex_template);
-            $replacement = '<a title="$1" href="' . esc_url($item['url']) . '">$1</a>';
 
-            $new_text = preg_replace($regex, $replacement, $text, $max_single);
+            $text = preg_replace_callback($regex, function ($matches) use (&$placeholders, &$links_added, &$url_counts, $item, $max_links, $max_single_url) {
+                // Check total limits inside callback
+                if ($max_links && $links_added >= $max_links) {
+                    return $matches[0];
+                }
+                if ($max_single_url && ($url_counts[$item['url']] ?? 0) >= $max_single_url) {
+                    return $matches[0];
+                }
 
-            if ($new_text !== $text) {
                 $links_added++;
                 $url_counts[$item['url']] = ($url_counts[$item['url']] ?? 0) + 1;
-                $text = (string) $new_text;
-            }
+
+                $link = '<a title="' . esc_attr($matches[1]) . '" href="' . esc_url($item['url']) . '">' . $matches[1] . '</a>';
+
+                // Protect immediately by returning a placeholder
+                $placeholder = '{JSAL_BLOCK_' . count($placeholders) . '}';
+                $placeholders[$placeholder] = $link;
+                return $placeholder;
+            }, $text, $max_single);
         }
 
         // Restore protected HTML tags
