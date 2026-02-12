@@ -37,7 +37,7 @@ class Admin
     public function render_settings_page(): void
     {
         // Handle saving
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['submitted']) || isset($_POST['submit']))) {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['submitted']) || isset($_POST['save_settings']))) {
             $this->handle_save();
 
             // Redirect to avoid resubmission and show success message

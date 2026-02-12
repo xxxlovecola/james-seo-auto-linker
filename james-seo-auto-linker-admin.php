@@ -511,7 +511,7 @@
                 <?php submit_button(
                     __('Save All Settings', 'james-seo-auto-linker'),
                     'primary',
-                    'submit',
+                    'save_settings',
                     false
                 ); ?>
                 <button type="button" class="button" id="clear-cache-button">
