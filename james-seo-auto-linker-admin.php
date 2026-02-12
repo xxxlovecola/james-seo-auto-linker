@@ -1,21 +1,21 @@
 <div class="wrap">
     <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
     
-    <div class="wpa-seo-auto-linker-admin">
+    <div class="james-seo-auto-linker-admin">
         <form name="SEOAutoLinks" action="<?php echo esc_url($action_url); ?>" method="post" id="seoautoform">
-            <?php wp_nonce_field('wpa-seo-auto-linker', '_wpnonce'); ?>
+            <?php wp_nonce_field('james-seo-auto-linker', '_wpnonce'); ?>
             <input type="hidden" name="submitted" value="1" />
             
             <!-- Introduction -->
             <div class="postbox">
                 <div class="postbox-header">
-                    <h2 class="hndle"><?php esc_html_e('About WPA SEO Auto Linker', 'wpa-seo-auto-linker'); ?></h2>
+                    <h2 class="hndle"><?php esc_html_e('About James SEO Auto Linker', 'james-seo-auto-linker'); ?></h2>
                 </div>
                 <div class="inside">
-                    <p><?php esc_html_e('WPA SEO Auto Linker automatically adds links for keywords and phrases in posts, pages and comments, linking them to corresponding posts, pages, categories, tags or any URL.', 'wpa-seo-auto-linker'); ?></p>
+                    <p><?php esc_html_e('James SEO Auto Linker automatically adds links for keywords and phrases in posts, pages and comments, linking them to corresponding posts, pages, categories, tags or any URL.', 'james-seo-auto-linker'); ?></p>
                     <p><?php printf(
-                        esc_html__('Found a bug or have a suggestion? %sVisit our support forum%s.', 'wpa-seo-auto-linker'),
-                        '<a href="https://wordpress.org/support/plugin/wpa-seo-auto-linker" target="_blank" rel="noopener">',
+                        esc_html__('Found a bug or have a suggestion? %sVisit our support forum%s.', 'james-seo-auto-linker'),
+                        '<a href="https://wordpress.org/support/plugin/james-seo-auto-linker" target="_blank" rel="noopener">',
                         '</a>'
                     ); ?></p>
                 </div>
@@ -24,18 +24,18 @@
             <!-- Custom Keywords -->
             <div class="postbox">
                 <div class="postbox-header">
-                    <h2 class="hndle"><?php esc_html_e('Custom Keywords', 'wpa-seo-auto-linker'); ?></h2>
+                    <h2 class="hndle"><?php esc_html_e('Custom Keywords', 'james-seo-auto-linker'); ?></h2>
                 </div>
                 <div class="inside">
                     <p class="description" style="margin-top: 0;">
-                        <?php esc_html_e('Manually add keywords to automatically link. Use comma to separate keywords and add target URL at the end. Use a new line for each URL and set of keywords.', 'wpa-seo-auto-linker'); ?>
+                        <?php esc_html_e('Manually add keywords to automatically link. Use comma to separate keywords and add target URL at the end. Use a new line for each URL and set of keywords.', 'james-seo-auto-linker'); ?>
                     </p>
                     
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
                                 <th scope="row">
-                                    <label for="customkey"><?php esc_html_e('Keywords & Links', 'wpa-seo-auto-linker'); ?></label>
+                                    <label for="customkey"><?php esc_html_e('Keywords & Links', 'james-seo-auto-linker'); ?></label>
                                 </th>
                                 <td>
                                     <textarea 
@@ -47,14 +47,14 @@
                                         aria-describedby="customkey-description"
                                     ><?php echo esc_textarea($customkey); ?></textarea>
                                     <p class="description" id="customkey-description">
-                                        <strong><?php esc_html_e('Examples:', 'wpa-seo-auto-linker'); ?></strong><br>
+                                        <strong><?php esc_html_e('Examples:', 'james-seo-auto-linker'); ?></strong><br>
                                         <code>google webmaster, https://www.google.com/webmasters/</code><br>
                                         <code>wiki, wikipedia, https://wikipedia.org</code>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Grouped Keywords', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Grouped Keywords', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <fieldset>
                                         <label for="customkey_preventduplicatelink">
@@ -65,17 +65,17 @@
                                                 value="1"
                                                 <?php checked($customkey_preventduplicatelink, 'checked'); ?>
                                             />
-                                            <?php esc_html_e('Prevent duplicate links for grouped keywords', 'wpa-seo-auto-linker'); ?>
+                                            <?php esc_html_e('Prevent duplicate links for grouped keywords', 'james-seo-auto-linker'); ?>
                                         </label>
                                         <p class="description">
-                                            <?php esc_html_e('Only link the first matching keyword found in text when multiple keywords point to the same URL.', 'wpa-seo-auto-linker'); ?>
+                                            <?php esc_html_e('Only link the first matching keyword found in text when multiple keywords point to the same URL.', 'james-seo-auto-linker'); ?>
                                         </p>
                                     </fieldset>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="customkey_url"><?php esc_html_e('Load from URL', 'wpa-seo-auto-linker'); ?></label>
+                                    <label for="customkey_url"><?php esc_html_e('Load from URL', 'james-seo-auto-linker'); ?></label>
                                 </th>
                                 <td>
                                     <input 
@@ -87,7 +87,7 @@
                                         placeholder="https://example.com/keywords.txt"
                                     />
                                     <p class="description">
-                                        <?php esc_html_e('Load custom keywords from a remote URL. This appends to the list above. Updated daily.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Load custom keywords from a remote URL. This appends to the list above. Updated daily.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
@@ -99,17 +99,17 @@
             <!-- Internal Links Processing -->
             <div class="postbox">
                 <div class="postbox-header">
-                    <h2 class="hndle"><?php esc_html_e('Where to Process Links', 'wpa-seo-auto-linker'); ?></h2>
+                    <h2 class="hndle"><?php esc_html_e('Where to Process Links', 'james-seo-auto-linker'); ?></h2>
                 </div>
                 <div class="inside">
                     <p class="description" style="margin-top: 0;">
-                        <?php esc_html_e('Choose where WPA SEO Auto Linker should automatically create links.', 'wpa-seo-auto-linker'); ?>
+                        <?php esc_html_e('Choose where James SEO Auto Linker should automatically create links.', 'james-seo-auto-linker'); ?>
                     </p>
                     
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Posts', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Posts', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <fieldset>
                                         <label for="post">
@@ -120,7 +120,7 @@
                                                 value="on"
                                                 <?php checked($post, 'checked'); ?>
                                             />
-                                            <strong><?php esc_html_e('Enable auto-linking in posts', 'wpa-seo-auto-linker'); ?></strong>
+                                            <strong><?php esc_html_e('Enable auto-linking in posts', 'james-seo-auto-linker'); ?></strong>
                                         </label>
                                         <br>
                                         <label for="postself">
@@ -131,13 +131,13 @@
                                                 value="on"
                                                 <?php checked($postself, 'checked'); ?>
                                             />
-                                            <?php esc_html_e('Allow posts to link to themselves', 'wpa-seo-auto-linker'); ?>
+                                            <?php esc_html_e('Allow posts to link to themselves', 'james-seo-auto-linker'); ?>
                                         </label>
                                     </fieldset>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Pages', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Pages', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <fieldset>
                                         <label for="page">
@@ -148,7 +148,7 @@
                                                 value="on"
                                                 <?php checked($page, 'checked'); ?>
                                             />
-                                            <strong><?php esc_html_e('Enable auto-linking in pages', 'wpa-seo-auto-linker'); ?></strong>
+                                            <strong><?php esc_html_e('Enable auto-linking in pages', 'james-seo-auto-linker'); ?></strong>
                                         </label>
                                         <br>
                                         <label for="pageself">
@@ -159,13 +159,13 @@
                                                 value="on"
                                                 <?php checked($pageself, 'checked'); ?>
                                             />
-                                            <?php esc_html_e('Allow pages to link to themselves', 'wpa-seo-auto-linker'); ?>
+                                            <?php esc_html_e('Allow pages to link to themselves', 'james-seo-auto-linker'); ?>
                                         </label>
                                     </fieldset>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Comments', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Comments', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="comment">
                                         <input 
@@ -175,16 +175,16 @@
                                             value="on"
                                             <?php checked($comment, 'checked'); ?>
                                         />
-                                        <strong><?php esc_html_e('Enable auto-linking in comments', 'wpa-seo-auto-linker'); ?></strong>
+                                        <strong><?php esc_html_e('Enable auto-linking in comments', 'james-seo-auto-linker'); ?></strong>
                                     </label>
                                     <p class="description">
                                         <span class="dashicons dashicons-warning" style="color: #d63638;"></span>
-                                        <?php esc_html_e('May impact performance on posts with many comments.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('May impact performance on posts with many comments.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('RSS Feeds', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('RSS Feeds', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="allowfeed">
                                         <input 
@@ -194,10 +194,10 @@
                                             value="on"
                                             <?php checked($allowfeed, 'checked'); ?>
                                         />
-                                        <strong><?php esc_html_e('Enable auto-linking in RSS feeds', 'wpa-seo-auto-linker'); ?></strong>
+                                        <strong><?php esc_html_e('Enable auto-linking in RSS feeds', 'james-seo-auto-linker'); ?></strong>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('Embed links in all posts in your RSS feed according to other settings.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Embed links in all posts in your RSS feed according to other settings.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
@@ -209,18 +209,18 @@
             <!-- Link Limits -->
             <div class="postbox">
                 <div class="postbox-header">
-                    <h2 class="hndle"><?php esc_html_e('Link Limits', 'wpa-seo-auto-linker'); ?></h2>
+                    <h2 class="hndle"><?php esc_html_e('Link Limits', 'james-seo-auto-linker'); ?></h2>
                 </div>
                 <div class="inside">
                     <p class="description" style="margin-top: 0;">
-                        <?php esc_html_e('Control the maximum number of links to prevent over-optimization.', 'wpa-seo-auto-linker'); ?>
+                        <?php esc_html_e('Control the maximum number of links to prevent over-optimization.', 'james-seo-auto-linker'); ?>
                     </p>
                     
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
                                 <th scope="row">
-                                    <label for="maxlinks"><?php esc_html_e('Max Total Links', 'wpa-seo-auto-linker'); ?></label>
+                                    <label for="maxlinks"><?php esc_html_e('Max Total Links', 'james-seo-auto-linker'); ?></label>
                                 </th>
                                 <td>
                                     <input 
@@ -233,13 +233,13 @@
                                         value="<?php echo esc_attr($maxlinks); ?>"
                                     />
                                     <p class="description">
-                                        <?php esc_html_e('Maximum number of different links per post. Set to 0 for unlimited.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Maximum number of different links per post. Set to 0 for unlimited.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="maxsingle"><?php esc_html_e('Max Per Keyword', 'wpa-seo-auto-linker'); ?></label>
+                                    <label for="maxsingle"><?php esc_html_e('Max Per Keyword', 'james-seo-auto-linker'); ?></label>
                                 </th>
                                 <td>
                                     <input 
@@ -252,13 +252,13 @@
                                         value="<?php echo esc_attr($maxsingle); ?>"
                                     />
                                     <p class="description">
-                                        <?php esc_html_e('Maximum links created for the same keyword. Set to 0 for unlimited.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Maximum links created for the same keyword. Set to 0 for unlimited.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="maxsingleurl"><?php esc_html_e('Max Same URLs', 'wpa-seo-auto-linker'); ?></label>
+                                    <label for="maxsingleurl"><?php esc_html_e('Max Same URLs', 'james-seo-auto-linker'); ?></label>
                                 </th>
                                 <td>
                                     <input 
@@ -271,12 +271,12 @@
                                         value="<?php echo esc_attr($maxsingleurl); ?>"
                                     />
                                     <p class="description">
-                                        <?php esc_html_e('Limit links to the same URL. Works when "Max Per Keyword" is set to 1. Set to 0 for unlimited.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Limit links to the same URL. Works when "Max Per Keyword" is set to 1. Set to 0 for unlimited.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Case Sensitivity', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Case Sensitivity', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="casesens">
                                         <input 
@@ -286,10 +286,10 @@
                                             value="on"
                                             <?php checked($casesens, 'checked'); ?>
                                         />
-                                        <?php esc_html_e('Enable case-sensitive matching', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Enable case-sensitive matching', 'james-seo-auto-linker'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('When enabled, "WordPress" and "wordpress" will be treated as different keywords.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('When enabled, "WordPress" and "wordpress" will be treated as different keywords.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
@@ -301,17 +301,17 @@
             <!-- Exclusions -->
             <div class="postbox">
                 <div class="postbox-header">
-                    <h2 class="hndle"><?php esc_html_e('Exclusions', 'wpa-seo-auto-linker'); ?></h2>
+                    <h2 class="hndle"><?php esc_html_e('Exclusions', 'james-seo-auto-linker'); ?></h2>
                 </div>
                 <div class="inside">
                     <p class="description" style="margin-top: 0;">
-                        <?php esc_html_e('Prevent linking in specific locations or for specific keywords.', 'wpa-seo-auto-linker'); ?>
+                        <?php esc_html_e('Prevent linking in specific locations or for specific keywords.', 'james-seo-auto-linker'); ?>
                     </p>
                     
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Headings', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Headings', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="excludeheading">
                                         <input 
@@ -321,16 +321,16 @@
                                             value="on"
                                             <?php checked($excludeheading, 'checked'); ?>
                                         />
-                                        <?php esc_html_e('Exclude links in headings (H1-H6)', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Exclude links in headings (H1-H6)', 'james-seo-auto-linker'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('Recommended for better SEO and readability.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Recommended for better SEO and readability.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="ignorepost"><?php esc_html_e('Ignore Posts/Pages', 'wpa-seo-auto-linker'); ?></label>
+                                    <label for="ignorepost"><?php esc_html_e('Ignore Posts/Pages', 'james-seo-auto-linker'); ?></label>
                                 </th>
                                 <td>
                                     <div class="tags">
@@ -340,18 +340,18 @@
                                             name="ignorepost" 
                                             class="large-text" 
                                             value="<?php echo esc_attr($ignorepost); ?>" 
-                                            placeholder="<?php esc_attr_e('Add post/page ID, slug, or name', 'wpa-seo-auto-linker'); ?>"
+                                            placeholder="<?php esc_attr_e('Add post/page ID, slug, or name', 'james-seo-auto-linker'); ?>"
                                             aria-describedby="ignorepost-description"
                                         />
                                     </div>
                                     <p class="description" id="ignorepost-description">
-                                        <?php esc_html_e('Prevent automatic linking on specific posts or pages. Separate by comma (ID, slug, or name).', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Prevent automatic linking on specific posts or pages. Separate by comma (ID, slug, or name).', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="ignore"><?php esc_html_e('Ignore Keywords', 'wpa-seo-auto-linker'); ?></label>
+                                    <label for="ignore"><?php esc_html_e('Ignore Keywords', 'james-seo-auto-linker'); ?></label>
                                 </th>
                                 <td>
                                     <div class="tags">
@@ -361,17 +361,17 @@
                                             name="ignore" 
                                             class="large-text" 
                                             value="<?php echo esc_attr($ignore); ?>" 
-                                            placeholder="<?php esc_attr_e('Add keyword to ignore', 'wpa-seo-auto-linker'); ?>"
+                                            placeholder="<?php esc_attr_e('Add keyword to ignore', 'james-seo-auto-linker'); ?>"
                                             aria-describedby="ignore-description"
                                         />
                                     </div>
                                     <p class="description" id="ignore-description">
-                                        <?php esc_html_e('Words or phrases to exclude from automatic linking. Separate by comma.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Words or phrases to exclude from automatic linking. Separate by comma.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Single Posts/Pages Only', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Single Posts/Pages Only', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="onlysingle">
                                         <input 
@@ -381,10 +381,10 @@
                                             value="on"
                                             <?php checked($onlysingle, 'checked'); ?>
                                         />
-                                        <?php esc_html_e('Only process on individual post/page views', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Only process on individual post/page views', 'james-seo-auto-linker'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('Reduces database load by skipping home page, archives, and category pages.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Reduces database load by skipping home page, archives, and category pages.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
@@ -396,17 +396,17 @@
             <!-- Link Targets -->
             <div class="postbox">
                 <div class="postbox-header">
-                    <h2 class="hndle"><?php esc_html_e('Link Targets', 'wpa-seo-auto-linker'); ?></h2>
+                    <h2 class="hndle"><?php esc_html_e('Link Targets', 'james-seo-auto-linker'); ?></h2>
                 </div>
                 <div class="inside">
                     <p class="description" style="margin-top: 0;">
-                        <?php esc_html_e('Choose what types of content WPA SEO Auto Linker should link to. Matching is based on post/page title or category/tag name.', 'wpa-seo-auto-linker'); ?>
+                        <?php esc_html_e('Choose what types of content James SEO Auto Linker should link to. Matching is based on post/page title or category/tag name.', 'james-seo-auto-linker'); ?>
                     </p>
                     
                     <table class="form-table" role="presentation">
                         <tbody>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Posts', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Posts', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="lposts">
                                         <input 
@@ -416,12 +416,12 @@
                                             value="on"
                                             <?php checked($lposts, 'checked'); ?>
                                         />
-                                        <?php esc_html_e('Link to posts when their title matches keywords', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Link to posts when their title matches keywords', 'james-seo-auto-linker'); ?>
                                     </label>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Pages', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Pages', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="lpages">
                                         <input 
@@ -431,12 +431,12 @@
                                             value="on"
                                             <?php checked($lpages, 'checked'); ?>
                                         />
-                                        <?php esc_html_e('Link to pages when their title matches keywords', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Link to pages when their title matches keywords', 'james-seo-auto-linker'); ?>
                                     </label>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Categories', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Categories', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="lcats">
                                         <input 
@@ -446,16 +446,16 @@
                                             value="on"
                                             <?php checked($lcats, 'checked'); ?>
                                         />
-                                        <?php esc_html_e('Link to categories when their name matches keywords', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Link to categories when their name matches keywords', 'james-seo-auto-linker'); ?>
                                     </label>
                                     <p class="description">
                                         <span class="dashicons dashicons-warning" style="color: #d63638;"></span>
-                                        <?php esc_html_e('May impact performance on sites with many categories.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('May impact performance on sites with many categories.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('Tags', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('Tags', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="ltags">
                                         <input 
@@ -465,17 +465,17 @@
                                             value="on"
                                             <?php checked($ltags, 'checked'); ?>
                                         />
-                                        <?php esc_html_e('Link to tags when their name matches keywords', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Link to tags when their name matches keywords', 'james-seo-auto-linker'); ?>
                                     </label>
                                     <p class="description">
                                         <span class="dashicons dashicons-warning" style="color: #d63638;"></span>
-                                        <?php esc_html_e('May impact performance on sites with many tags.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('May impact performance on sites with many tags.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
                                 <th scope="row">
-                                    <label for="minusage"><?php esc_html_e('Min Category/Tag Usage', 'wpa-seo-auto-linker'); ?></label>
+                                    <label for="minusage"><?php esc_html_e('Min Category/Tag Usage', 'james-seo-auto-linker'); ?></label>
                                 </th>
                                 <td>
                                     <input 
@@ -488,12 +488,12 @@
                                         value="<?php echo esc_attr($minusage); ?>"
                                     />
                                     <p class="description">
-                                        <?php esc_html_e('Only link to categories and tags used this many times or more.', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Only link to categories and tags used this many times or more.', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><?php esc_html_e('External Links', 'wpa-seo-auto-linker'); ?></th>
+                                <th scope="row"><?php esc_html_e('External Links', 'james-seo-auto-linker'); ?></th>
                                 <td>
                                     <label for="nofolo">
                                         <input 
@@ -503,10 +503,10 @@
                                             value="on"
                                             <?php checked($nofolo, 'checked'); ?>
                                         />
-                                        <?php esc_html_e('Add nofollow to external links', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Add nofollow to external links', 'james-seo-auto-linker'); ?>
                                     </label>
                                     <p class="description">
-                                        <?php esc_html_e('Adds rel="nofollow" attribute to all external links (links not pointing to your domain).', 'wpa-seo-auto-linker'); ?>
+                                        <?php esc_html_e('Adds rel="nofollow" attribute to all external links (links not pointing to your domain).', 'james-seo-auto-linker'); ?>
                                     </p>
                                 </td>
                             </tr>
@@ -518,13 +518,13 @@
             <!-- Submit Button -->
             <p class="submit">
                 <?php submit_button(
-                    __('Save All Settings', 'wpa-seo-auto-linker'),
+                    __('Save All Settings', 'james-seo-auto-linker'),
                     'primary',
                     'submit',
                     false
                 ); ?>
                 <button type="button" class="button" id="clear-cache-button">
-                    <?php esc_html_e('Clear Link Cache', 'wpa-seo-auto-linker'); ?>
+                    <?php esc_html_e('Clear Link Cache', 'james-seo-auto-linker'); ?>
                 </button>
             </p>
 
@@ -533,12 +533,12 @@
                 <div class="inside" style="text-align: center; padding: 20px;">
                     <p style="margin: 0;">
                         <?php printf(
-                            esc_html__('Running WPA SEO Auto Linker v%s', 'wpa-seo-auto-linker'),
+                            esc_html__('Running James SEO Auto Linker v%s', 'james-seo-auto-linker'),
                             '<strong>2.0.0</strong>'
                         ); ?>
                         &bull;
                         <?php printf(
-                            esc_html__('Like what we do? %sBuy us a drink%s 🍺', 'wpa-seo-auto-linker'),
+                            esc_html__('Like what we do? %sBuy us a drink%s 🍺', 'james-seo-auto-linker'),
                             '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5LRFCEJLZQW7A" target="_blank" rel="noopener">',
                             '</a>'
                         ); ?>
@@ -554,12 +554,12 @@ jQuery(document).ready(function($) {
     // Clear cache button
     $('#clear-cache-button').on('click', function(e) {
         e.preventDefault();
-        if (confirm('<?php echo esc_js(__('Are you sure you want to clear the link cache?', 'wpa-seo-auto-linker')); ?>')) {
+        if (confirm('<?php echo esc_js(__('Are you sure you want to clear the link cache?', 'james-seo-auto-linker')); ?>')) {
             $.post(ajaxurl, {
                 action: 'seo_auto_linker_clear_cache',
                 nonce: '<?php echo esc_js(wp_create_nonce('clear-cache')); ?>'
             }, function(response) {
-                alert('<?php echo esc_js(__('Cache cleared successfully!', 'wpa-seo-auto-linker')); ?>');
+                alert('<?php echo esc_js(__('Cache cleared successfully!', 'james-seo-auto-linker')); ?>');
             });
         }
     });
@@ -573,27 +573,27 @@ jQuery(document).ready(function($) {
 </script>
 
 <style>
-.wpa-seo-auto-linker-admin .postbox {
+.james-seo-auto-linker-admin .postbox {
     margin-bottom: 20px;
 }
-.wpa-seo-auto-linker-admin .postbox-header {
+.james-seo-auto-linker-admin .postbox-header {
     border-bottom: 1px solid #ccd0d4;
 }
-.wpa-seo-auto-linker-admin .inside {
+.james-seo-auto-linker-admin .inside {
     padding: 15px;
 }
-.wpa-seo-auto-linker-admin .form-table th {
+.james-seo-auto-linker-admin .form-table th {
     width: 220px;
     padding: 15px 10px 15px 0;
 }
-.wpa-seo-auto-linker-admin .form-table td {
+.james-seo-auto-linker-admin .form-table td {
     padding: 15px 10px;
 }
-.wpa-seo-auto-linker-admin fieldset label {
+.james-seo-auto-linker-admin fieldset label {
     display: block;
     margin: 5px 0;
 }
-.wpa-seo-auto-linker-admin .description {
+.james-seo-auto-linker-admin .description {
     margin-top: 5px;
 }
 </style>

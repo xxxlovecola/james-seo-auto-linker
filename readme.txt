@@ -1,14 +1,14 @@
-=== SEO Auto Linker ===
+=== James SEO Auto Linker ===
 Contributors: arjanolsder
-Plugin Name: SEO Auto Linker
+Plugin Name: James SEO Auto Linker
 Plugin URI: https://www.websitenazorg.nl
 Tags:  post, posts, pages, tags, categories, comments, links, seo, google, automatic, link, cornerstone, RSS
 Author URI: https://www.websitenazorg.nl
 Author: WebsiteNazorg.nl
 Requires at least: 5.6
 Tested up to: 6.7.1
-Stable tag: 1.5.3
-Version: 1.5.3
+Stable tag: 1.0
+Version: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,7 +16,7 @@ SEO Auto Linker assists in creating cornerstone SEO content. This is not a full 
 
 == Description == 
 
-Want to automatically create cornerstone content? WPA SEO Auto Linker helps get this done. Simply create a new keyword or a new phrase. The system will link that keyword or phrase to your chosen dofollow URL. Through the settings, it is easy to finetune the workings of this plugin. For performance, it is best to make use of a caching engine.
+Want to automatically create cornerstone content? James SEO Auto Linker helps get this done. Simply create a new keyword or a new phrase. The system will link that keyword or phrase to your chosen dofollow URL. Through the settings, it is easy to finetune the workings of this plugin. For performance, it is best to make use of a caching engine.
 
 "Using this plugin didn't just help define cornerstone content in our SEO strategy, it also increased pageviews by 18%. The average visitor spends 13 seconds more on our website." - Roelof van Doorn, technical editor at GadgetGear.nl
 
@@ -24,9 +24,9 @@ While our plugin has been without support for three years, we have seen a lot of
 
 == Installation ==
 
-1. Upload the complete wpa-seo-auto-linker folder to your /wp-content/plugins/ folder.
+1. Upload the complete james-seo-auto-linker folder to your /wp-content/plugins/ folder.
 2. Go to the Plugins page and activate the plugin.
-3. Use the WPA SEO Auto Linker settings page under settings to change the settings for WPA SEO Auto Linker.
+3. Use the James SEO Auto Linker settings page under settings to change the settings for James SEO Auto Linker.
 4. Enjoy the automatically inserted links.
 
 Migrating from SEO Auto Links?
@@ -36,7 +36,7 @@ Just deactivate the original plugin. The current version uses the exact same set
 
 = Where are the settings? =
 
-You can find WPA SEO Auto Linker under the WordPress settings menu. If you are also using Yoast, SEOpress Pro, Rankmath, All in One SEO, Schema Pro or SEOquake, you will find the settings in their menu's too.
+You can find James SEO Auto Linker under the WordPress settings menu. If you are also using Yoast, SEOpress Pro, Rankmath, All in One SEO, Schema Pro or SEOquake, you will find the settings in their menu's too.
 
 = What page builders are supported? =
 
@@ -119,7 +119,7 @@ Support has not been tested. After the Gutenburg update, we will put our resourc
 
 == Credits ==
 
-WPA SEO Auto Linker plugin is based on the SEO Auto Links 0.5 plugin by Maarten Brakkee.
+James SEO Auto Linker plugin is based on the SEO Auto Links 0.5 plugin by Maarten Brakkee.
 https://wordpress.org/plugins/seo-auto-links/
 
 The SEO Auto links plugin is based on the SEO Smart Links 2.7.6 plugin by Vladimir Prelovac:
@@ -130,10 +130,10 @@ http://www.planetofthepenguins.com/
 
 == License ==
 
-This file is part of WPA SEO Auto Linker.
+This file is part of James SEO Auto Linker.
 
-WPA SEO Auto Linker is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+James SEO Auto Linker is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-WPA SEO Auto Linker is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. See the GNU General Public License for more details.
+James SEO Auto Linker is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY. See the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License along with WPA SEO Auto Linker. If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License along with James SEO Auto Linker. If not, see <http://www.gnu.org/licenses/>.

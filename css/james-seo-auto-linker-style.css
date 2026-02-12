@@ -1,6 +1,6 @@
 /**
- * WPA SEO Auto Linker - Admin Styles
- * Version: 2.0.0
+ * James SEO Auto Linker - Admin Styles
+ * Version: 1.0
  */
 
 /* ============================================================================
@@ -103,22 +103,22 @@
    Admin Page Structure
    ========================================================================= */
 
-.wpa-seo-auto-linker-admin {
+.james-seo-auto-linker-admin {
     max-width: 1200px;
 }
 
-.wpa-seo-auto-linker-admin .postbox {
+.james-seo-auto-linker-admin .postbox {
     border: 1px solid #c3c4c7;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
     background: #fff;
 }
 
-.wpa-seo-auto-linker-admin .postbox-header {
+.james-seo-auto-linker-admin .postbox-header {
     border-bottom: 1px solid #c3c4c7;
     background: #f6f7f7;
 }
 
-.wpa-seo-auto-linker-admin .postbox-header h2 {
+.james-seo-auto-linker-admin .postbox-header h2 {
     margin: 0;
     padding: 12px;
     font-size: 14px;
@@ -126,7 +126,7 @@
     line-height: 1.4;
 }
 
-.wpa-seo-auto-linker-admin .inside {
+.james-seo-auto-linker-admin .inside {
     padding: 15px;
 }
 
@@ -134,59 +134,59 @@
    Form Elements
    ========================================================================= */
 
-.wpa-seo-auto-linker-admin .form-table {
+.james-seo-auto-linker-admin .form-table {
     margin-top: 0;
 }
 
-.wpa-seo-auto-linker-admin .form-table th {
+.james-seo-auto-linker-admin .form-table th {
     width: 220px;
     padding: 15px 10px 15px 0;
     font-weight: 600;
     vertical-align: top;
 }
 
-.wpa-seo-auto-linker-admin .form-table td {
+.james-seo-auto-linker-admin .form-table td {
     padding: 15px 10px;
 }
 
 /* Fieldsets for Grouped Checkboxes */
-.wpa-seo-auto-linker-admin fieldset {
+.james-seo-auto-linker-admin fieldset {
     margin: 0;
     padding: 0;
     border: none;
 }
 
-.wpa-seo-auto-linker-admin fieldset label {
+.james-seo-auto-linker-admin fieldset label {
     display: block;
     margin: 8px 0;
     line-height: 1.6;
 }
 
-.wpa-seo-auto-linker-admin fieldset label:first-child {
+.james-seo-auto-linker-admin fieldset label:first-child {
     margin-top: 0;
 }
 
 /* Input Fields */
-.wpa-seo-auto-linker-admin input[type="text"],
-.wpa-seo-auto-linker-admin input[type="url"],
-.wpa-seo-auto-linker-admin input[type="number"],
-.wpa-seo-auto-linker-admin textarea {
+.james-seo-auto-linker-admin input[type="text"],
+.james-seo-auto-linker-admin input[type="url"],
+.james-seo-auto-linker-admin input[type="number"],
+.james-seo-auto-linker-admin textarea {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-.wpa-seo-auto-linker-admin textarea.large-text {
+.james-seo-auto-linker-admin textarea.large-text {
     min-height: 200px;
     line-height: 1.6;
 }
 
 /* Checkboxes */
-.wpa-seo-auto-linker-admin input[type="checkbox"] {
+.james-seo-auto-linker-admin input[type="checkbox"] {
     margin: 0 8px 0 0;
     vertical-align: middle;
 }
 
 /* Number Inputs */
-.wpa-seo-auto-linker-admin input[type="number"] {
+.james-seo-auto-linker-admin input[type="number"] {
     width: 80px;
 }
 
@@ -194,7 +194,7 @@
    Descriptions & Help Text
    ========================================================================= */
 
-.wpa-seo-auto-linker-admin .description {
+.james-seo-auto-linker-admin .description {
     display: block;
     margin-top: 8px;
     font-size: 13px;
@@ -202,20 +202,20 @@
     color: #646970;
 }
 
-.wpa-seo-auto-linker-admin .description code {
+.james-seo-auto-linker-admin .description code {
     padding: 2px 6px;
     background: #f0f0f1;
     border-radius: 3px;
     font-size: 12px;
 }
 
-.wpa-seo-auto-linker-admin .description .dashicons {
+.james-seo-auto-linker-admin .description .dashicons {
     vertical-align: middle;
     margin-right: 4px;
 }
 
 /* Warning Messages */
-.wpa-seo-auto-linker-admin .description .dashicons-warning {
+.james-seo-auto-linker-admin .description .dashicons-warning {
     color: #d63638;
 }
 
@@ -223,13 +223,13 @@
    Submit Area
    ========================================================================= */
 
-.wpa-seo-auto-linker-admin .submit {
+.james-seo-auto-linker-admin .submit {
     margin: 0;
     padding: 15px 0 0;
     border-top: 1px solid #c3c4c7;
 }
 
-.wpa-seo-auto-linker-admin .submit .button {
+.james-seo-auto-linker-admin .submit .button {
     margin-right: 10px;
 }
 
@@ -254,16 +254,16 @@
    Footer Section
    ========================================================================= */
 
-.wpa-seo-auto-linker-admin .postbox:last-child {
+.james-seo-auto-linker-admin .postbox:last-child {
     margin-top: 20px;
 }
 
-.wpa-seo-auto-linker-admin .postbox:last-child .inside {
+.james-seo-auto-linker-admin .postbox:last-child .inside {
     text-align: center;
     padding: 20px;
 }
 
-.wpa-seo-auto-linker-admin .postbox:last-child p {
+.james-seo-auto-linker-admin .postbox:last-child p {
     margin: 0;
     color: #646970;
 }
@@ -273,14 +273,14 @@
    ========================================================================= */
 
 @media screen and (max-width: 782px) {
-    .wpa-seo-auto-linker-admin .form-table th,
-    .wpa-seo-auto-linker-admin .form-table td {
+    .james-seo-auto-linker-admin .form-table th,
+    .james-seo-auto-linker-admin .form-table td {
         display: block;
         width: 100%;
         padding: 10px 0;
     }
     
-    .wpa-seo-auto-linker-admin .form-table th {
+    .james-seo-auto-linker-admin .form-table th {
         padding-bottom: 5px;
     }
     
@@ -294,12 +294,12 @@
 }
 
 @media screen and (max-width: 600px) {
-    .wpa-seo-auto-linker-admin .postbox-header h2 {
+    .james-seo-auto-linker-admin .postbox-header h2 {
         font-size: 13px;
         padding: 10px;
     }
     
-    .wpa-seo-auto-linker-admin .inside {
+    .james-seo-auto-linker-admin .inside {
         padding: 12px;
     }
     
@@ -314,11 +314,11 @@
    ========================================================================= */
 
 /* Focus Styles */
-.wpa-seo-auto-linker-admin a:focus,
-.wpa-seo-auto-linker-admin button:focus,
-.wpa-seo-auto-linker-admin input:focus,
-.wpa-seo-auto-linker-admin textarea:focus,
-.wpa-seo-auto-linker-admin select:focus {
+.james-seo-auto-linker-admin a:focus,
+.james-seo-auto-linker-admin button:focus,
+.james-seo-auto-linker-admin input:focus,
+.james-seo-auto-linker-admin textarea:focus,
+.james-seo-auto-linker-admin select:focus {
     outline: 2px solid #2271b1;
     outline-offset: 0;
 }
@@ -330,7 +330,7 @@
 }
 
 /* Skip Links */
-.wpa-seo-auto-linker-admin .screen-reader-text {
+.james-seo-auto-linker-admin .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     clip-path: inset(50%);
     height: 1px;
@@ -342,7 +342,7 @@
     word-wrap: normal !important;
 }
 
-.wpa-seo-auto-linker-admin .screen-reader-text:focus {
+.james-seo-auto-linker-admin .screen-reader-text:focus {
     background-color: #f1f1f1;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -367,7 +367,7 @@
    ========================================================================= */
 
 @media (prefers-color-scheme: dark) {
-    .wpa-seo-auto-linker-admin .description code {
+    .james-seo-auto-linker-admin .description code {
         background: #1e1e1e;
         color: #f0f0f1;
     }
@@ -378,7 +378,7 @@
    ========================================================================= */
 
 @media print {
-    .wpa-seo-auto-linker-admin .submit {
+    .james-seo-auto-linker-admin .submit {
         display: none;
     }
     
@@ -386,7 +386,7 @@
         display: none;
     }
     
-    .wpa-seo-auto-linker-admin .postbox {
+    .james-seo-auto-linker-admin .postbox {
         box-shadow: none;
         page-break-inside: avoid;
     }
