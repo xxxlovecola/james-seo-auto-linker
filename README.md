@@ -25,5 +25,19 @@
 - Clean rebranding and optimized code.
 - Added French translation support.
 
+## Frequently Asked Questions
+
+### Does this plugin affect site performance?
+No, James SEO Auto Linker is built with performance in mind. It uses a smart Transient caching system to minimize database queries and ensure your content is processed efficiently.
+
+### Can I link to external websites?
+Yes! In the "Custom Keywords" section, you can specify any URL, including external sites.
+
+### Can I prevent certain words from being linked?
+Yes, you can add words or phrases to the "Ignore Keywords" list in the settings to exclude them from automatic linking.
+
+### Can I disable auto-linking for a single post?
+Yes, thanks to our new Gutenberg integration, you can find a toggle in the block editor sidebar to disable auto-linking for that specific post or page.
+
 ## Author
 **James Colin**

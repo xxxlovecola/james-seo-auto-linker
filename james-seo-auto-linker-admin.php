@@ -545,6 +545,31 @@
                     </p>
                 </div>
             </div>
+
+            <!-- FAQ Section -->
+            <div class="postbox">
+                <div class="postbox-header">
+                    <h2 class="hndle"><?php esc_html_e('Frequently Asked Questions', 'james-seo-auto-linker'); ?></h2>
+                </div>
+                <div class="inside">
+                    <div class="faq-item">
+                        <h4 style="margin-bottom: 5px;"><?php esc_html_e('Does this plugin affect site performance?', 'james-seo-auto-linker'); ?></h4>
+                        <p style="margin-top: 0;"><?php esc_html_e('No, James SEO Auto Linker uses a smart Transient caching system to ensure your site stays fast by minimizing database queries.', 'james-seo-auto-linker'); ?></p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 style="margin-bottom: 5px;"><?php esc_html_e('Can I link to external websites?', 'james-seo-auto-linker'); ?></h4>
+                        <p style="margin-top: 0;"><?php esc_html_e('Yes! In the "Custom Keywords" section, you can specify any URL, including external sites.', 'james-seo-auto-linker'); ?></p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 style="margin-bottom: 5px;"><?php esc_html_e('Can I prevent certain words from being linked?', 'james-seo-auto-linker'); ?></h4>
+                        <p style="margin-top: 0;"><?php esc_html_e('Yes, you can add words or phrases to the "Ignore Keywords" list under Exclusions to exclude them.', 'james-seo-auto-linker'); ?></p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 style="margin-bottom: 5px;"><?php esc_html_e('How do I disable auto-linking for a single post?', 'james-seo-auto-linker'); ?></h4>
+                        <p style="margin-top: 0;"><?php esc_html_e('When editing a post or page in Gutenberg, look for the "SEO Auto Linker" panel in the sidebar to find the disable toggle.', 'james-seo-auto-linker'); ?></p>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 </div>
