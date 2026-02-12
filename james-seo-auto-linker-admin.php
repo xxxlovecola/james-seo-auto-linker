@@ -543,8 +543,8 @@
                         ); ?>
                         &bull;
                         <?php printf(
-                            esc_html__('Like what we do? %sBuy us a drink%s 🍺', 'james-seo-auto-linker'),
-                            '<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5LRFCEJLZQW7A" target="_blank" rel="noopener">',
+                            esc_html__('Like what I do? %sBuy me a drink%s 🍺', 'james-seo-auto-linker'),
+                            '<a href="https://www.paypal.com/donate/?hosted_button_id=373SW82EJ8MNS" target="_blank">',
                             '</a>'
                         ); ?>
                     </p>
