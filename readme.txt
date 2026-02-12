@@ -16,13 +16,14 @@ James SEO Auto Linker automatically adds links for keywords and phrases in your 
 Whether you want to link to your own posts, pages, categories, tags, or even external URLs, this plugin handles it all with optimized performance.
 
 ### Key Features:
-*   **Custom Keywords:** Define exact keywords and the URLs they should point to.
-*   **Auto-Targeting:** Automatically link keywords to your existing posts, pages, categories, and tags based on titles.
-*   **Link Limits:** Control how many links are created per post/page to avoid over-optimization.
-*   **Smart Exclusions:** Prevent linking in headings (H1-H6) or on specific posts/pages.
-*   **RSS Support:** Optionally include your automatic links in your RSS feeds.
-*   **Performance Focused:** Uses smart caching to ensure your site stays fast.
-*   **Nofollow Support:** Automatically add `rel="nofollow"` to external links.
+*   **Gutenberg Integration:** Per-post control with a dedicated "Disable Auto-Linking" toggle in the block editor sidebar.
+*   **High-Performance Caching:** Uses WordPress Persistent Transients to ensure lightning-fast link generation with minimal database load.
+*   **Smart Internal Linking:** Automatically turn post/page titles, categories, and tags into helpful internal links.
+*   **Custom Keywords:** Define specific keyword-to-URL mappings, supporting both internal and external destinations.
+*   **Advanced Exclusions:** Skip headings (H1-H6), ignored keywords, or specific posts and pages.
+*   **Pro Link Limits:** Fine-tune the density of links per post and per keyword to maintain a natural look.
+*   **RSS & Feed Support:** Optionally apply your linking strategy to your site's RSS feeds.
+*   **Modern & Secure:** Built on a modular PSR-4 architecture with strict security standards and full French translation support.
 
 == Installation ==
 

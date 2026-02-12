@@ -4,13 +4,14 @@
 
 ## Features
 
-- **Custom Keywords**: Link specific keywords to any URL.
-- **Internal Linking**: Automatically link to posts, pages, categories, and tags.
-- **Link Control**: Set limits on the number of links per page.
-- **Exclusions**: Skip headings (H1-H6) and specific posts/pages.
-- **RSS Support**: Enable auto-linking in your RSS feed.
-- **Nofollow**: Option to add `rel="nofollow"` to external links.
-- **Performance**: Optimized with caching for minimal impact.
+- **Gutenberg Ready**: Integrated toggle in the Block Editor sidebar to disable auto-linking on a per-post basis.
+- **Persistent Caching**: Leverages WordPress Transients for high-performance link generation that doesn't slow down your site.
+- **Smart Internal Linking**: Automatically link keywords to posts, pages, categories, and tags based on their titles.
+- **Custom Keyword Mapping**: Manually define keywords and their target URLs (supports internal and external links).
+- **Advanced Control**: Set limits on links per page, per keyword, and per URL to avoid over-optimization.
+- **Intelligent Exclusions**: Automatically skip headings (H1-H6) and specific post IDs or slugs.
+- **Modern Architecture**: Built with a modular, namespaced PHP structure (PSR-4) for maximum reliability and ease of extension.
+- **Translation Ready**: Full support for internationalization, including French translation.
 
 ## Installation
 

@@ -12,8 +12,13 @@
                     <h2 class="hndle"><?php esc_html_e('About James SEO Auto Linker', 'james-seo-auto-linker'); ?></h2>
                 </div>
                 <div class="inside">
-                    <p><?php esc_html_e('James SEO Auto Linker automatically adds links for keywords and phrases in posts, pages and comments, linking them to corresponding posts, pages, categories, tags or any URL.', 'james-seo-auto-linker'); ?></p>
-                    <p><?php printf(
+                    <p><strong><?php esc_html_e('James SEO Auto Linker', 'james-seo-auto-linker'); ?></strong> <?php esc_html_e('is a modern, high-performance plugin designed to automate your internal linking strategy.', 'james-seo-auto-linker'); ?></p>
+                    <ul style="list-style-type: disc; margin-left: 20px;">
+                        <li><strong><?php esc_html_e('Gutenberg Ready:', 'james-seo-auto-linker'); ?></strong> <?php esc_html_e('Disable auto-linking on individual posts via the sidebar toggle.', 'james-seo-auto-linker'); ?></li>
+                        <li><strong><?php esc_html_e('Persistent Caching:', 'james-seo-auto-linker'); ?></strong> <?php esc_html_e('Uses WordPress Transients to ensure lightning-fast performance across your site.', 'james-seo-auto-linker'); ?></li>
+                        <li><strong><?php esc_html_e('Modular Architecture:', 'james-seo-auto-linker'); ?></strong> <?php esc_html_e('Built with clean, namespaced PHP code for maximum reliability.', 'james-seo-auto-linker'); ?></li>
+                    </ul>
+                    <p style="margin-top: 15px;"><?php printf(
                         esc_html__('Found a bug or have a suggestion? %sVisit our support forum%s.', 'james-seo-auto-linker'),
                         '<a href="https://wordpress.org/support/plugin/james-seo-auto-linker" target="_blank" rel="noopener">',
                         '</a>'
