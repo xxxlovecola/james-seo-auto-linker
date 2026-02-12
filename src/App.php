@@ -55,7 +55,7 @@ class App
 
         // Translation
         add_action('init', function () {
-            load_plugin_textdomain('james-seo-auto-linker', false, dirname(plugin_basename(__FILE__, 2)) . '/languages/');
+            load_plugin_textdomain('james-seo-auto-linker', false, dirname(plugin_basename(__FILE__)) . '/languages/');
         });
     }
 

@@ -22,9 +22,9 @@ class Processor
     public function filter_content(string $text, bool $is_comment = false): string
     {
         // Check if auto-linking is disabled for this specific post (Gutenberg toggle)
-        if (!$is_comment && is_singular()) {
-            $disabled = get_post_meta(get_the_ID(), '_james_seo_auto_linker_disabled', true);
-            if ($disabled === '1') {
+        if (!$is_comment) {
+            $post_id = get_the_ID();
+            if ($post_id && get_post_meta($post_id, '_james_seo_auto_linker_disabled', true) === '1') {
                 return $text;
             }
         }
