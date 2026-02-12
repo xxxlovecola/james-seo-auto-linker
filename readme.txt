@@ -44,7 +44,7 @@ Yes, you can add words or phrases to the "Ignore Keywords" list in the settings.
 
 == Screenshots ==
 
-1. The main settings page where you can configure all linking options.
+1. The main settings page where you can configure all linking options and exclusions.
 
 == Changelog ==
 

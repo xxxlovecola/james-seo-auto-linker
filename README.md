@@ -2,6 +2,8 @@
 
 **James SEO Auto Linker** is a lightweight WordPress plugin that automatically adds links for keywords and phrases in your content, boosting your internal linking strategy and overall SEO.
 
+![James SEO Auto Linker Settings](screenshot-1.png)
+
 ## Features
 
 - **Gutenberg Ready**: Integrated toggle in the Block Editor sidebar to disable auto-linking on a per-post basis.
