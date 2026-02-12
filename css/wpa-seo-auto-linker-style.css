@@ -1,0 +1,393 @@
+/**
+ * WPA SEO Auto Linker - Admin Styles
+ * Version: 2.0.0
+ */
+
+/* ============================================================================
+   Tag Input Widget
+   ========================================================================= */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    background: #fff;
+    min-height: 44px;
+}
+
+.tags:focus-within {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: 2px solid transparent;
+}
+
+/* Individual Tag Pills */
+.tags span.tag {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 32px 6px 12px;
+    background: #2271b1;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.tags span.tag:hover {
+    background: #135e96;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tags span.tag:active {
+    transform: translateY(0);
+}
+
+/* Remove Button (X) */
+.tags span.tag::after {
+    content: "×";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.tags span.tag:hover::after {
+    opacity: 1;
+}
+
+/* Tag Input Field */
+.tags input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 6px 8px;
+    border: none;
+    background: transparent;
+    font-size: 13px;
+    line-height: 1.4;
+    outline: none;
+}
+
+.tags input[type="text"]:focus {
+    outline: none;
+}
+
+.tags input[type="text"]::placeholder {
+    color: #8c8f94;
+    opacity: 0.7;
+}
+
+/* Empty State */
+.tags:empty::before {
+    content: attr(data-placeholder);
+    color: #8c8f94;
+    font-style: italic;
+}
+
+/* ============================================================================
+   Admin Page Structure
+   ========================================================================= */
+
+.wpa-seo-auto-linker-admin {
+    max-width: 1200px;
+}
+
+.wpa-seo-auto-linker-admin .postbox {
+    border: 1px solid #c3c4c7;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    background: #fff;
+}
+
+.wpa-seo-auto-linker-admin .postbox-header {
+    border-bottom: 1px solid #c3c4c7;
+    background: #f6f7f7;
+}
+
+.wpa-seo-auto-linker-admin .postbox-header h2 {
+    margin: 0;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.wpa-seo-auto-linker-admin .inside {
+    padding: 15px;
+}
+
+/* ============================================================================
+   Form Elements
+   ========================================================================= */
+
+.wpa-seo-auto-linker-admin .form-table {
+    margin-top: 0;
+}
+
+.wpa-seo-auto-linker-admin .form-table th {
+    width: 220px;
+    padding: 15px 10px 15px 0;
+    font-weight: 600;
+    vertical-align: top;
+}
+
+.wpa-seo-auto-linker-admin .form-table td {
+    padding: 15px 10px;
+}
+
+/* Fieldsets for Grouped Checkboxes */
+.wpa-seo-auto-linker-admin fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.wpa-seo-auto-linker-admin fieldset label {
+    display: block;
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.wpa-seo-auto-linker-admin fieldset label:first-child {
+    margin-top: 0;
+}
+
+/* Input Fields */
+.wpa-seo-auto-linker-admin input[type="text"],
+.wpa-seo-auto-linker-admin input[type="url"],
+.wpa-seo-auto-linker-admin input[type="number"],
+.wpa-seo-auto-linker-admin textarea {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.wpa-seo-auto-linker-admin textarea.large-text {
+    min-height: 200px;
+    line-height: 1.6;
+}
+
+/* Checkboxes */
+.wpa-seo-auto-linker-admin input[type="checkbox"] {
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+}
+
+/* Number Inputs */
+.wpa-seo-auto-linker-admin input[type="number"] {
+    width: 80px;
+}
+
+/* ============================================================================
+   Descriptions & Help Text
+   ========================================================================= */
+
+.wpa-seo-auto-linker-admin .description {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #646970;
+}
+
+.wpa-seo-auto-linker-admin .description code {
+    padding: 2px 6px;
+    background: #f0f0f1;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.wpa-seo-auto-linker-admin .description .dashicons {
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+/* Warning Messages */
+.wpa-seo-auto-linker-admin .description .dashicons-warning {
+    color: #d63638;
+}
+
+/* ============================================================================
+   Submit Area
+   ========================================================================= */
+
+.wpa-seo-auto-linker-admin .submit {
+    margin: 0;
+    padding: 15px 0 0;
+    border-top: 1px solid #c3c4c7;
+}
+
+.wpa-seo-auto-linker-admin .submit .button {
+    margin-right: 10px;
+}
+
+#clear-cache-button {
+    background: transparent;
+    border-color: #2271b1;
+    color: #2271b1;
+}
+
+#clear-cache-button:hover {
+    background: #2271b1;
+    border-color: #135e96;
+    color: #fff;
+}
+
+#clear-cache-button:focus {
+    border-color: #0a4b78;
+    box-shadow: 0 0 0 1px #0a4b78;
+}
+
+/* ============================================================================
+   Footer Section
+   ========================================================================= */
+
+.wpa-seo-auto-linker-admin .postbox:last-child {
+    margin-top: 20px;
+}
+
+.wpa-seo-auto-linker-admin .postbox:last-child .inside {
+    text-align: center;
+    padding: 20px;
+}
+
+.wpa-seo-auto-linker-admin .postbox:last-child p {
+    margin: 0;
+    color: #646970;
+}
+
+/* ============================================================================
+   Responsive Design
+   ========================================================================= */
+
+@media screen and (max-width: 782px) {
+    .wpa-seo-auto-linker-admin .form-table th,
+    .wpa-seo-auto-linker-admin .form-table td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .wpa-seo-auto-linker-admin .form-table th {
+        padding-bottom: 5px;
+    }
+    
+    .tags {
+        width: 100%;
+    }
+    
+    .tags input[type="text"] {
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wpa-seo-auto-linker-admin .postbox-header h2 {
+        font-size: 13px;
+        padding: 10px;
+    }
+    
+    .wpa-seo-auto-linker-admin .inside {
+        padding: 12px;
+    }
+    
+    .tags span.tag {
+        padding: 5px 28px 5px 10px;
+        font-size: 12px;
+    }
+}
+
+/* ============================================================================
+   Accessibility Enhancements
+   ========================================================================= */
+
+/* Focus Styles */
+.wpa-seo-auto-linker-admin a:focus,
+.wpa-seo-auto-linker-admin button:focus,
+.wpa-seo-auto-linker-admin input:focus,
+.wpa-seo-auto-linker-admin textarea:focus,
+.wpa-seo-auto-linker-admin select:focus {
+    outline: 2px solid #2271b1;
+    outline-offset: 0;
+}
+
+/* Keyboard Navigation for Tags */
+.tags span.tag:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Skip Links */
+.wpa-seo-auto-linker-admin .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    word-wrap: normal !important;
+}
+
+.wpa-seo-auto-linker-admin .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    clip-path: none;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+
+/* ============================================================================
+   Dark Mode Support (WordPress 5.7+)
+   ========================================================================= */
+
+@media (prefers-color-scheme: dark) {
+    .wpa-seo-auto-linker-admin .description code {
+        background: #1e1e1e;
+        color: #f0f0f1;
+    }
+}
+
+/* ============================================================================
+   Print Styles
+   ========================================================================= */
+
+@media print {
+    .wpa-seo-auto-linker-admin .submit {
+        display: none;
+    }
+    
+    .tags span.tag::after {
+        display: none;
+    }
+    
+    .wpa-seo-auto-linker-admin .postbox {
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+}
