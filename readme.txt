@@ -2,6 +2,7 @@
 Contributors: James Colin
 Tags: seo, links, auto linker, internal links, backlink, keywords, automatic links, rss, marketing
 Requires at least: 5.6
+Requires PHP: 7.4
 Tested up to: 6.7.1
 Stable tag: 1.0
 License: GPLv2 or later

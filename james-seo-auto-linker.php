@@ -4,6 +4,8 @@ Plugin Name: James SEO Auto Linker
 Version: 1.0
 Author: James Colin
 Description: James SEO Auto Linker inserts links on keywords automatically with optimized performance and security.
+Requires at least: 5.6
+Requires PHP: 7.4
 */
 
 // Prevent direct access
