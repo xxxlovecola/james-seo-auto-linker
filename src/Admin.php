@@ -36,8 +36,17 @@ class Admin
 
     public function render_settings_page(): void
     {
-        if (isset($_POST['submitted'])) {
+        // Handle saving
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['submitted']) || isset($_POST['submit']))) {
             $this->handle_save();
+
+            // Redirect to avoid resubmission and show success message
+            wp_safe_redirect(add_query_arg('settings-updated', 'true', admin_url('options-general.php?page=james-seo-auto-linker')));
+            exit;
+        }
+
+        if (isset($_GET['settings-updated']) && $_GET['settings-updated'] === 'true') {
+            echo '<div class="updated notice is-dismissible"><p>' . esc_html__('Settings saved successfully.', 'james-seo-auto-linker') . '</p></div>';
         }
 
         $options = $this->settings->get();
@@ -98,8 +107,6 @@ class Admin
         ]);
 
         $this->cache->clear_all();
-
-        echo '<div class="updated"><p>' . esc_html__('Plugin settings saved.', 'james-seo-auto-linker') . '</p></div>';
     }
 
     public function enqueue_assets($hook): void
