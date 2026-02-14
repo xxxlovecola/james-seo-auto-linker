@@ -22,11 +22,9 @@ class Processor
     public function filter_content(string $text, bool $is_comment = false): string
     {
         // Check if auto-linking is disabled for this specific post (Gutenberg toggle)
-        if (!$is_comment) {
-            $post_id = get_the_ID();
-            if ($post_id && get_post_meta($post_id, '_james_seo_auto_linker_disabled', true) === '1') {
-                return $text;
-            }
+        $post_id = get_the_ID();
+        if ($post_id && get_post_meta($post_id, '_james_seo_auto_linker_disabled', true) === '1') {
+            return $text;
         }
 
         return $this->process_text($text, $is_comment);
@@ -256,7 +254,7 @@ class Processor
         return $wpdb->get_results($wpdb->prepare(
             "SELECT post_title, ID, post_type FROM {$wpdb->posts} WHERE post_status = %s AND LENGTH(post_title) > %d ORDER BY LENGTH(post_title) DESC LIMIT %d",
             'publish',
-            3,
+            1,
             2000
         )) ?: [];
     }
@@ -267,7 +265,7 @@ class Processor
         return $wpdb->get_results($wpdb->prepare(
             "SELECT t.name, t.term_id FROM {$wpdb->terms} t LEFT JOIN {$wpdb->term_taxonomy} tt ON t.term_id = tt.term_id WHERE tt.taxonomy = %s AND LENGTH(t.name) > %d AND tt.count >= %d ORDER BY LENGTH(t.name) DESC LIMIT %d",
             $tax,
-            3,
+            1,
             $min_usage,
             2000
         )) ?: [];
