@@ -82,14 +82,6 @@ class Processor
         $url_counts = [];
         $ignored_keywords = $this->explode_trim(',', (string) $this->settings->get('ignore', ''));
 
-        // Exclude headings from linking
-        if ($this->settings->get('excludeheading') === 'on') {
-            $text = preg_replace_callback(
-                '/<h[1-6][^>]*>.*?<\/h[1-6]>/si',
-                fn($match) => preg_replace('/<a[^>]*>(.*?)<\/a>/i', '$1', $match[0]),
-                $text
-            );
-        }
 
         $case_modifier = $this->settings->get('casesens') ? '' : 'i';
         $regex_template = '/(?<![\p{L}\p{N}])($name)(?![\p{L}\p{N}])/msu' . $case_modifier;
@@ -97,10 +89,15 @@ class Processor
 
         $text = ' ' . $text . ' ';
 
-        // Protect existing HTML tags and links
+        // Protect existing HTML tags and links (and headings if requested)
+        $protected_tags = 'a|script|style|code|pre|img';
+        if ($this->settings->get('excludeheading') === 'on') {
+            $protected_tags .= '|h[1-6]';
+        }
+
         $placeholders = [];
         $text = preg_replace_callback(
-            '#<(a|script|style|code|pre|img)[^>]*>.*?</\1>|<[^>]+>#si',
+            '#<(' . $protected_tags . ')[^>]*>.*?</\1>|<[^>]+>#si',
             function ($matches) use (&$placeholders) {
                 $placeholder = '{JSAL_BLOCK_' . count($placeholders) . '}';
                 $placeholders[$placeholder] = $matches[0];
