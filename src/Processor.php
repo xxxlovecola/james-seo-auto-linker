@@ -118,11 +118,27 @@ class Processor
             if ($strpos_func($text_normalized, $keyword_normalized) === false)
                 continue;
 
-            $keyword_escaped = preg_quote($item['keyword'], '/');
+            $keyword_raw = html_entity_decode($item['keyword'], ENT_QUOTES | ENT_HTML5);
+            $keyword_escaped = preg_quote($keyword_raw, '/');
+
+            // Relaxed matching for spaces (normal space, non-breaking space, etc.)
+            $keyword_escaped = str_replace(' ', '(?:\s|&nbsp;|&#160;)+', $keyword_escaped);
+
+            // Relaxed matching for dashes (hyphens, en-dashes, em-dashes and their entities)
+            $dash_regex = '(?:-|–|—|&ndash;|&#8211;|&mdash;|&#8212;)';
+            $keyword_escaped = str_replace('\-', $dash_regex, $keyword_escaped);
+
+            // Relaxed matching for quotes (single quotes, apostrophes, etc.)
             $quote_regex = "(?:'|’|‘|`|&rsquo;|&lsquo;|&#8217;|&#8216;|&#039;)";
-            $keyword_escaped = str_replace(["\'", "’", "‘", "`"], $quote_regex, $keyword_escaped);
-            $keyword_escaped = preg_replace('/\\\\\s+/', '\\s+', $keyword_escaped);
-            $keyword_escaped = str_replace('\-', '\-?', $keyword_escaped);
+            $keyword_escaped = str_replace("'", $quote_regex, $keyword_escaped);
+
+            // Relaxed matching for double quotes
+            $double_quote_regex = '(?:"|“|”|&quot;|&#034;|&#34;)';
+            $keyword_escaped = str_replace('"', $double_quote_regex, $keyword_escaped);
+
+            // Relaxed matching for ampersands (must be done last to avoid breaking other entities)
+            $amp_regex = '(?:&|&amp;|&#038;|&#38;)';
+            $keyword_escaped = str_replace('&', $amp_regex, $keyword_escaped);
 
             if ($item['is_grouped']) {
                 $keyword_escaped = str_replace(',', '|', $keyword_escaped);
