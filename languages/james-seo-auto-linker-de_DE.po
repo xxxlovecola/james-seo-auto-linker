@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: James SEO Auto Linker 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-14 15:30+0100\n"
-"PO-Revision-Date: 2026-02-14 15:30+0100\n"
+"POT-Creation-Date: 2026-02-14 15:35+0100\n"
+"PO-Revision-Date: 2026-02-14 15:35+0100\n"
 "Last-Translator: Antigravity AI\n"
-"Language-Team: French\n"
-"Language: fr_FR\n"
+"Language-Team: German\n"
+"Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: james-seo-auto-linker-admin.php:12
 msgid "About James SEO Auto Linker"
-msgstr "À propos de James SEO Auto Linker"
+msgstr "Über James SEO Auto Linker"
 
 #: james-seo-auto-linker-admin.php:15
 msgid "James SEO Auto Linker"
@@ -22,340 +22,340 @@ msgstr "James SEO Auto Linker"
 
 #: james-seo-auto-linker-admin.php:15
 msgid "is a modern, high-performance plugin designed to automate your internal linking strategy."
-msgstr "est une extension moderne et performante conçue pour automatiser votre stratégie de maillage interne."
+msgstr "ist ein modernes, leistungsstarkes Plugin zur Automatisierung Ihrer internen Verlinkungsstrategie."
 
 #: james-seo-auto-linker-admin.php:17
 msgid "Gutenberg Ready:"
-msgstr "Prêt pour Gutenberg :"
+msgstr "Gutenberg-bereit:"
 
 #: james-seo-auto-linker-admin.php:17
 msgid "Disable auto-linking on individual posts via the sidebar toggle."
-msgstr "Désactivez le lien automatique sur les articles individuels via le bouton latéral."
+msgstr "Deaktivieren Sie die automatische Verlinkung für einzelne Beiträge über die Seitenleiste."
 
 #: james-seo-auto-linker-admin.php:18
 msgid "Persistent Caching:"
-msgstr "Cache Persistant :"
+msgstr "Persistentes Caching:"
 
 #: james-seo-auto-linker-admin.php:18
 msgid "Uses WordPress Transients to ensure lightning-fast performance across your site."
-msgstr "Utilise les Transients WordPress pour garantir des performances ultra-rapides sur tout votre site."
+msgstr "Verwendet WordPress Transients für blitzschnelle Leistung auf Ihrer gesamten Website."
 
 #: james-seo-auto-linker-admin.php:19
 msgid "Modular Architecture:"
-msgstr "Architecture Modulaire :"
+msgstr "Modulare Architektur:"
 
 #: james-seo-auto-linker-admin.php:19
 msgid "Built with clean, namespaced PHP code for maximum reliability."
-msgstr "Construit avec un code PHP propre et espacé pour une fiabilité maximale."
+msgstr "Erstellt mit sauberem PHP-Code für maximale Zuverlässigkeit."
 
 #: james-seo-auto-linker-admin.php:22
 msgid "Found a bug or have a suggestion? %sVisit our support forum%s."
-msgstr "Vous avez trouvé un bug ou avez une suggestion ? %sVisitez notre forum d’assistance%s."
+msgstr "Fehler gefunden oder Vorschlag? %sBesuchen Sie unser Support-Forum%s."
 
 #: james-seo-auto-linker-admin.php:32
 msgid "Custom Keywords"
-msgstr "Mots-clés personnalisés"
+msgstr "Benutzerdefinierte Keywords"
 
 #: james-seo-auto-linker-admin.php:36
 msgid "Manually add keywords to automatically link. Use comma to separate keywords and add target URL at the end. Use a new line for each URL and set of keywords."
-msgstr "Ajoutez manuellement des mots-clés pour un lien automatique. Utilisez une virgule pour séparer les mots-clés et ajoutez l’URL cible à la fin. Utilisez une nouvelle ligne pour chaque URL et série de mots-clés."
+msgstr "Fügen Sie Keywords manuell hinzu. Komma zur Trennung, Ziel-URL am Ende. Neue Zeile für jede URL."
 
 #: james-seo-auto-linker-admin.php:43
 msgid "Keywords & Links"
-msgstr "Mots-clés & Liens"
+msgstr "Keywords & Links"
 
 #: james-seo-auto-linker-admin.php:55
 msgid "Examples:"
-msgstr "Exemples :"
+msgstr "Beispiele:"
 
 #: james-seo-auto-linker-admin.php:62
 msgid "Grouped Keywords"
-msgstr "Mots-clés groupés"
+msgstr "Gruppierte Keywords"
 
 #: james-seo-auto-linker-admin.php:73
 msgid "Prevent duplicate links for grouped keywords"
-msgstr "Empêcher les liens en double pour les mots-clés groupés"
+msgstr "Doppelte Links für gruppierte Keywords verhindern"
 
 #: james-seo-auto-linker-admin.php:76
 msgid "Only link the first matching keyword found in text when multiple keywords point to the same URL."
-msgstr "Lier uniquement le premier mot-clé correspondant trouvé dans le texte lorsque plusieurs mots-clés pointent vers la même URL."
+msgstr "Nur das erste gefundene Keyword verlinken, wenn mehrere auf dieselbe URL zeigen."
 
 #: james-seo-auto-linker-admin.php:83
 msgid "Load from URL"
-msgstr "Charger depuis une URL"
+msgstr "Von URL laden"
 
 #: james-seo-auto-linker-admin.php:95
 msgid "Load custom keywords from a remote URL. This appends to the list above. Updated daily."
-msgstr "Charger des mots-clés personnalisés à partir d’une URL distante. Ceci s’ajoute à la liste ci-dessus. Mis à jour quotidiennement."
+msgstr "Benutzerdefinierte Keywords von einer Remote-URL laden. Täglich aktualisiert."
 
 #: james-seo-auto-linker-admin.php:107
 msgid "Where to Process Links"
-msgstr "Où traiter les liens"
+msgstr "Wo Links verarbeitet werden sollen"
 
 #: james-seo-auto-linker-admin.php:111
 msgid "Choose where James SEO Auto Linker should automatically create links."
-msgstr "Choisissez où James SEO Auto Linker doit créer automatiquement des liens."
+msgstr "Wählen Sie, wo James SEO Auto Linker automatisch Links erstellen soll."
 
 #: james-seo-auto-linker-admin.php:117
 msgid "Posts"
-msgstr "Articles"
+msgstr "Beiträge"
 
 #: james-seo-auto-linker-admin.php:128
 msgid "Enable auto-linking in posts"
-msgstr "Activer le lien automatique dans les articles"
+msgstr "Automatische Verlinkung in Beiträgen aktivieren"
 
 #: james-seo-auto-linker-admin.php:132
 msgid "Note: Posts will not link to themselves to prevent over-optimization."
-msgstr "Note : Les articles ne se lieront pas à eux-mêmes pour éviter la sur-optimisation."
+msgstr "Hinweis: Beiträge verlinken nicht auf sich selbst, um Überoptimierung zu vermeiden."
 
 #: james-seo-auto-linker-admin.php:138
 msgid "Pages"
-msgstr "Pages"
+msgstr "Seiten"
 
 #: james-seo-auto-linker-admin.php:149
 msgid "Enable auto-linking in pages"
-msgstr "Activer le lien automatique dans les pages"
+msgstr "Automatische Verlinkung auf Seiten aktivieren"
 
 #: james-seo-auto-linker-admin.php:153
 msgid "Note: Pages will not link to themselves to prevent over-optimization."
-msgstr "Note : Les pages ne se lieront pas à elles-mêmes pour éviter la sur-optimisation."
+msgstr "Hinweis: Seiten verlinken nicht auf sich selbst."
 
 #: james-seo-auto-linker-admin.php:169
 msgid "Comments"
-msgstr "Commentaires"
+msgstr "Kommentare"
 
 #: james-seo-auto-linker-admin.php:173
 msgid "Enable auto-linking in comments"
-msgstr "Activer le lien automatique dans les commentaires"
+msgstr "Automatische Verlinkung in Kommentaren aktivieren"
 
 #: james-seo-auto-linker-admin.php:177
 msgid "May impact performance on posts with many comments."
-msgstr "Peut avoir un impact sur les performances des articles contenant de nombreux commentaires."
+msgstr "Kann die Leistung bei Beiträgen mit vielen Kommentaren beeinträchtigen."
 
 #: james-seo-auto-linker-admin.php:191
 msgid "RSS Feeds"
-msgstr "Flux RSS"
+msgstr "RSS-Feeds"
 
 #: james-seo-auto-linker-admin.php:196
 msgid "Enable auto-linking in RSS feeds"
-msgstr "Activer le lien automatique dans les flux RSS"
+msgstr "Automatische Verlinkung in RSS-Feeds aktivieren"
 
 #: james-seo-auto-linker-admin.php:199
 msgid "Embed links in all posts in your RSS feed according to other settings."
-msgstr "Intégrer des liens dans tous les articles de votre flux RSS selon d’autres paramètres."
+msgstr "Links in alle Beiträge Ihres RSS-Feeds einbetten."
 
 #: james-seo-auto-linker-admin.php:213
 msgid "Link Limits"
-msgstr "Limites de liens"
+msgstr "Link-Limits"
 
 #: james-seo-auto-linker-admin.php:217
 msgid "Control the maximum number of links to prevent over-optimization."
-msgstr "Contrôlez le nombre maximal de liens pour éviter une sur-optimisation."
+msgstr "Steuern Sie die maximale Anzahl von Links."
 
 #: james-seo-auto-linker-admin.php:224
 msgid "Max Total Links"
-msgstr "Nombre total maximal de liens"
+msgstr "Max. Gesamtzahl Links"
 
 #: james-seo-auto-linker-admin.php:227
 msgid "Maximum number of different links per post. Set to 0 for unlimited."
-msgstr "Nombre maximal de liens différents par article. Réglez sur 0 pour illimité."
+msgstr "Maximale Anzahl verschiedener Links pro Beitrag. 0 für unbegrenzt."
 
 #: james-seo-auto-linker-admin.php:233
 msgid "Max Per Keyword"
-msgstr "Maximum par mot-clé"
+msgstr "Max. pro Keyword"
 
 #: james-seo-auto-linker-admin.php:236
 msgid "Maximum links created for the same keyword. Set to 0 for unlimited."
-msgstr "Nombre maximal de liens créés pour le même mot-clé. Réglez sur 0 pour illimité."
+msgstr "Maximale Links für dasselbe Keyword. 0 für unbegrenzt."
 
 #: james-seo-auto-linker-admin.php:242
 msgid "Max Same URLs"
-msgstr "Maximum pour les mêmes URL"
+msgstr "Max. gleiche URLs"
 
 #: james-seo-auto-linker-admin.php:246
 msgid "Limit links to the same URL. Works when \"Max Per Keyword\" is set to 1. Set to 0 for unlimited."
-msgstr "Limiter les liens vers la même URL. Fonctionne lorsque « Maximum par mot-clé » est réglé sur 1. Réglez sur 0 pour illimité."
+msgstr "Links zur gleichen URL begrenzen. Funktioniert, wenn \"Max. pro Keyword\" 1 ist."
 
 #: james-seo-auto-linker-admin.php:270
 msgid "Case Sensitivity"
-msgstr "Sensibilité à la casse"
+msgstr "Groß-/Kleinschreibung"
 
 #: james-seo-auto-linker-admin.php:280
 msgid "Enable case-sensitive matching"
-msgstr "Activer la correspondance sensible à la casse"
+msgstr "Groß-/Kleinschreibung beachten"
 
 #: james-seo-auto-linker-admin.php:283
 msgid "When enabled, \"WordPress\" and \"wordpress\" will be treated as different keywords."
-msgstr "Lorsqu’elle est activée, « WordPress » et « wordpress » seront traités comme des mots-clés différents."
+msgstr "Wenn aktiviert, werden \"WordPress\" und \"wordpress\" unterschiedlich behandelt."
 
 #: james-seo-auto-linker-admin.php:295
 msgid "Exclusions"
-msgstr "Exclusions"
+msgstr "Ausschlüsse"
 
 #: james-seo-auto-linker-admin.php:299
 msgid "Prevent linking in specific locations or for specific keywords."
-msgstr "Empêcher les liens dans des emplacements spécifiques ou pour des mots-clés spécifiques."
+msgstr "Verlinkung an bestimmten Orten oder für bestimmte Keywords verhindern."
 
 #: james-seo-auto-linker-admin.php:305
 msgid "Headings"
-msgstr "Titres"
+msgstr "Überschriften"
 
 #: james-seo-auto-linker-admin.php:315
 msgid "Exclude links in headings (H1-H6)"
-msgstr "Exclure les liens dans les titres (H1-H6)"
+msgstr "Links in Überschriften (H1-H6) ausschließen"
 
 #: james-seo-auto-linker-admin.php:318
 msgid "Recommended for better SEO and readability."
-msgstr "Recommandé pour un meilleur SEO et une meilleure lisibilité."
+msgstr "Empfohlen für besseres SEO und Lesbarkeit."
 
 #: james-seo-auto-linker-admin.php:324
 msgid "Ignore Posts/Pages"
-msgstr "Ignorer les articles/pages"
+msgstr "Beiträge/Seiten ignorieren"
 
 #: james-seo-auto-linker-admin.php:339
 msgid "Prevent automatic linking on specific posts or pages. Separate by comma (ID, slug, or name)."
-msgstr "Empêcher le lien automatique sur des articles ou pages spécifiques. Séparez par une virgule (ID, slug ou nom)."
+msgstr "Verlinkung auf bestimmten Beiträgen verhindern. Durch Komma trennen."
 
 #: james-seo-auto-linker-admin.php:345
 msgid "Ignore Keywords"
-msgstr "Ignorer les mots-clés"
+msgstr "Keywords ignorieren"
 
 #: james-seo-auto-linker-admin.php:360
 msgid "Words or phrases to exclude from automatic linking. Separate by comma."
-msgstr "Mots ou expressions à exclure du lien automatique. Séparez par une virgule."
+msgstr "Wörter oder Phrasen ausschließen. Durch Komma trennen."
 
 #: james-seo-auto-linker-admin.php:365
 msgid "Single Posts/Pages Only"
-msgstr "Uniquement les articles/pages individuels"
+msgstr "Nur einzelne Beiträge/Seiten"
 
 #: james-seo-auto-linker-admin.php:375
 msgid "Only process on individual post/page views"
-msgstr "Traiter uniquement sur les vues d’articles/pages individuelles"
+msgstr "Nur bei Einzelansicht von Beiträgen/Seiten verarbeiten"
 
 #: james-seo-auto-linker-admin.php:378
 msgid "Reduces database load by skipping home page, archives, and category pages."
-msgstr "Réduit la charge de la base de données en ignorant la page d’accueil, les archives et les pages de catégories."
+msgstr "Reduziert die Datenbanklast durch Überspringen von Startseite und Archiven."
 
 #: james-seo-auto-linker-admin.php:390
 msgid "Link Targets"
-msgstr "Cibles des liens"
+msgstr "Link-Ziele"
 
 #: james-seo-auto-linker-admin.php:394
 msgid "The targets James SEO Auto Linker should consider. The match will be based on post/page title or category/tag name, case insensitive."
-msgstr "Les cibles que James SEO Auto Linker doit prendre en compte. La correspondance sera basée sur le titre de l’article/la page ou le nom de la catégorie/étiquette, insensible à la casse."
+msgstr "Die Ziele, die berücksichtigt werden sollen."
 
 #: james-seo-auto-linker-admin.php:400
 msgid "Categories"
-msgstr "Catégories"
+msgstr "Kategorien"
 
 #: james-seo-auto-linker-admin.php:410
 msgid "Enable to link internal links to categories."
-msgstr "Activer le lien vers les catégories internes."
+msgstr "Interne Links zu Kategorien aktivieren."
 
 #: james-seo-auto-linker-admin.php:415
 msgid "Tags"
-msgstr "Étiquettes"
+msgstr "Schlagwörter"
 
 #: james-seo-auto-linker-admin.php:425
 msgid "Enable to link internal links to tags."
-msgstr "Activer le lien vers les étiquettes internes."
+msgstr "Interne Links zu Schlagwörtern aktivieren."
 
 #: james-seo-auto-linker-admin.php:430
 msgid "Minimum categories/tags"
-msgstr "Nombre minimal de catégories/étiquettes"
+msgstr "Mindestanzahl Kategorien/Schlagwörter"
 
 #: james-seo-auto-linker-admin.php:440
 msgid "Only link categories and tags that have been used the above number of times or more."
-msgstr "Lier uniquement les catégories et étiquettes qui ont été utilisées le nombre de fois indiqué ci-dessus ou plus."
+msgstr "Nur Kategorien/Schlagwörter verlinken, die so oft oder öfter verwendet wurden."
 
 #: james-seo-auto-linker-admin.php:444
 msgid "Add nofollow"
-msgstr "Ajouter nofollow"
+msgstr "Nofollow hinzufügen"
 
 #: james-seo-auto-linker-admin.php:449
 msgid "Add nofollow to external links"
-msgstr "Ajouter nofollow aux liens externes"
+msgstr "Nofollow zu externen Links hinzufügen"
 
 #: james-seo-auto-linker-admin.php:459
 msgid "Add a nofollow attribute to the external links."
-msgstr "Ajouter un attribut nofollow aux liens externes."
+msgstr "Fügt externen Links ein Nofollow-Attribut hinzu."
 
 #: james-seo-auto-linker-admin.php:463
 msgid "Open in new window"
-msgstr "Ouvrir dans une nouvelle fenêtre"
+msgstr "In neuem Fenster öffnen"
 
 #: james-seo-auto-linker-admin.php:469
 msgid "Open external links in a new window"
-msgstr "Ouvrir les liens externes dans une nouvelle fenêtre"
+msgstr "Externe Links in neuem Fenster öffnen"
 
 #: james-seo-auto-linker-admin.php:479
 msgid "Open the external links in a new window."
-msgstr "Ouvrir les liens externes dans une nouvelle fenêtre."
+msgstr "Öffnet externe Links in einem neuen Fenster."
 
 #: james-seo-auto-linker-admin.php:487
 msgid "Link Cache"
-msgstr "Cache de liens"
+msgstr "Link-Cache"
 
 #: james-seo-auto-linker-admin.php:497
 msgid "Clear link cache"
-msgstr "Vider le cache de liens"
+msgstr "Link-Cache leeren"
 
 #: james-seo-auto-linker-admin.php:500
 msgid "Clears the temporary link cache stored in WordPress Transients. Use this if links are not reflecting your latest settings."
-msgstr "Vide le cache temporaire des liens stocké dans les Transients WordPress. Utilisez ceci si les liens ne reflètent pas vos derniers paramètres."
+msgstr "Leert den temporären Link-Cache."
 
 #: james-seo-auto-linker-admin.php:518
 msgid "About the Author"
-msgstr "À propos de l’auteur"
+msgstr "Über den Autor"
 
 #: james-seo-auto-linker-admin.php:527
 msgid "Like what I do? %sBuy me a drink%s 🍺"
-msgstr "Vous aimez ce que je fais ? %sOffrez-moi un verre%s 🍺"
+msgstr "Gefällt Ihnen meine Arbeit? %sSpendieren Sie mir einen Drink%s 🍺"
 
 #: james-seo-auto-linker-admin.php:543
 msgid "Frequently Asked Questions"
-msgstr "Foire Aux Questions"
+msgstr "Häufig gestellte Fragen"
 
 #: james-seo-auto-linker-admin.php:547
 msgid "Does this plugin affect site performance?"
-msgstr "Cette extension affecte-t-elle les performances du site ?"
+msgstr "Beeinträchtigt dieses Plugin die Website-Leistung?"
 
 #: james-seo-auto-linker-admin.php:548
 msgid "No, James SEO Auto Linker uses a smart Transient caching system to ensure your site stays fast by minimizing database queries."
-msgstr "Non, James SEO Auto Linker utilise un système de cache Transient intelligent pour garantir que votre site reste rapide en minimisant les requêtes de base de données."
+msgstr "Nein, James SEO Auto Linker verwendet ein intelligentes Caching-System."
 
 #: james-seo-auto-linker-admin.php:551
 msgid "Can I link to external websites?"
-msgstr "Puis-je lier vers des sites externes ?"
+msgstr "Kann ich auf externe Websites verlinken?"
 
 #: james-seo-auto-linker-admin.php:552
 msgid "Yes! In the \"Custom Keywords\" section, you can specify any URL, including external sites."
-msgstr "Oui ! Dans la section « Mots-clés personnalisés », vous pouvez spécifier n’importe quelle URL, y compris des sites externes."
+msgstr "Ja! Sie können jede URL angeben."
 
 #: james-seo-auto-linker-admin.php:555
 msgid "Can I prevent certain words from being linked?"
-msgstr "Puis-je empêcher certains mots d’être liés ?"
+msgstr "Kann ich verhindern, dass bestimmte Wörter verlinkt werden?"
 
 #: james-seo-auto-linker-admin.php:556
 msgid "Yes, you can add words or phrases to the \"Ignore Keywords\" list under Exclusions to exclude them."
-msgstr "Oui, vous pouvez ajouter des mots ou des phrases à la liste « Ignorer les mots-clés » sous Exclusions pour les exclure."
+msgstr "Ja, Sie können Wörter zur Ausschlussliste hinzufügen."
 
 #: james-seo-auto-linker-admin.php:559
 msgid "How do I disable auto-linking for a single post?"
-msgstr "Comment désactiver le lien automatique pour un seul article ?"
+msgstr "Wie deaktiviere ich die Verlinkung für einen einzelnen Beitrag?"
 
 #: james-seo-auto-linker-admin.php:560
 msgid "When editing a post or page in Gutenberg, look for the \"SEO Auto Linker\" panel in the sidebar to find the disable toggle."
-msgstr "Lors de l’édition d’un article ou d’une page dans Gutenberg, cherchez le panneau « SEO Auto Linker » dans la barre latérale pour trouver le bouton de désactivation."
+msgstr "Im Gutenberg-Editor finden Sie das Panel in der Seitenleiste."
 
 #: src/Admin.php:38
 msgid "Settings saved successfully."
-msgstr "Paramètres enregistrés avec succès."
+msgstr "Einstellungen erfolgreich gespeichert."
 
 #: src/Admin.php:123
 msgid "Are you sure you want to clear the link cache?"
-msgstr "Êtes-vous sûr de vouloir vider le cache de liens ?"
+msgstr "Sind Sie sicher, dass Sie den Link-Cache leeren möchten?"
 
 #: src/Admin.php:128
 msgid "Cache cleared successfully!"
-msgstr "Cache vidé avec succès !"
+msgstr "Cache erfolgreich geleert!"

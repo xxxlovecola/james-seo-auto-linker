@@ -1,0 +1,361 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: James SEO Auto Linker 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-14 15:35+0100\n"
+"PO-Revision-Date: 2026-02-14 15:35+0100\n"
+"Last-Translator: Antigravity AI\n"
+"Language-Team: Hindi\n"
+"Language: hi_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Antigravity AI\n"
+
+#: james-seo-auto-linker-admin.php:12
+msgid "About James SEO Auto Linker"
+msgstr "James SEO Auto Linker के बारे में"
+
+#: james-seo-auto-linker-admin.php:15
+msgid "James SEO Auto Linker"
+msgstr "James SEO Auto Linker"
+
+#: james-seo-auto-linker-admin.php:15
+msgid "is a modern, high-performance plugin designed to automate your internal linking strategy."
+msgstr "एक आधुनिक, उच्च-प्रदर्शन वाला प्लगइन है जिसे आपकी आंतरिक लिंकिंग रणनीति को स्वचालित करने के लिए डिज़ाइन किया गया है।"
+
+#: james-seo-auto-linker-admin.php:17
+msgid "Gutenberg Ready:"
+msgstr "Gutenberg तैयार:"
+
+#: james-seo-auto-linker-admin.php:17
+msgid "Disable auto-linking on individual posts via the sidebar toggle."
+msgstr "साइडबार टॉगल के माध्यम से अलग-अलग पोस्ट पर ऑटो-लिंकिंग अक्षम करें।"
+
+#: james-seo-auto-linker-admin.php:18
+msgid "Persistent Caching:"
+msgstr "लगातार कैशिंग:"
+
+#: james-seo-auto-linker-admin.php:18
+msgid "Uses WordPress Transients to ensure lightning-fast performance across your site."
+msgstr "आपकी साइट पर बिजली की तेजी से प्रदर्शन सुनिश्चित करने के लिए वर्डप्रेस ट्रांसिएंट्स का उपयोग करता है।"
+
+#: james-seo-auto-linker-admin.php:19
+msgid "Modular Architecture:"
+msgstr "मॉड्यूलर आर्किटेक्चर:"
+
+#: james-seo-auto-linker-admin.php:19
+msgid "Built with clean, namespaced PHP code for maximum reliability."
+msgstr "अधिकतम विश्वसनीयता के लिए स्वच्छ, नामस्थान वाले PHP कोड के साथ बनाया गया।"
+
+#: james-seo-auto-linker-admin.php:22
+msgid "Found a bug or have a suggestion? %sVisit our support forum%s."
+msgstr "कोई बग मिला या कोई सुझाव है? %sहमारे सहायता मंच पर जाएँ%s।"
+
+#: james-seo-auto-linker-admin.php:32
+msgid "Custom Keywords"
+msgstr "कस्टम कीवर्ड"
+
+#: james-seo-auto-linker-admin.php:36
+msgid "Manually add keywords to automatically link. Use comma to separate keywords and add target URL at the end. Use a new line for each URL and set of keywords."
+msgstr "स्वचालित रूप से लिंक करने के लिए कीवर्ड मैन्युअल रूप से जोड़ें। कीवर्ड अलग करने के लिए अल्पविराम का उपयोग करें और अंत में लक्ष्य URL जोड़ें।"
+
+#: james-seo-auto-linker-admin.php:43
+msgid "Keywords & Links"
+msgstr "कीवर्ड और लिंक"
+
+#: james-seo-auto-linker-admin.php:55
+msgid "Examples:"
+msgstr "उदाहरण:"
+
+#: james-seo-auto-linker-admin.php:62
+msgid "Grouped Keywords"
+msgstr "समूहीकृत कीवर्ड"
+
+#: james-seo-auto-linker-admin.php:73
+msgid "Prevent duplicate links for grouped keywords"
+msgstr "समूहीकृत कीवर्ड के लिए डुप्लिकेट लिंक रोकें"
+
+#: james-seo-auto-linker-admin.php:76
+msgid "Only link the first matching keyword found in text when multiple keywords point to the same URL."
+msgstr "जब कई कीवर्ड एक ही URL को इंगित करते हैं, तो टेक्स्ट में पाए गए पहले मिलान वाले कीवर्ड को ही लिंक करें।"
+
+#: james-seo-auto-linker-admin.php:83
+msgid "Load from URL"
+msgstr "URL से लोड करें"
+
+#: james-seo-auto-linker-admin.php:95
+msgid "Load custom keywords from a remote URL. This appends to the list above. Updated daily."
+msgstr "रिमोट URL से कस्टम कीवर्ड लोड करें। यह ऊपर दी गई सूची में जुड़ जाता है। प्रतिदिन अपडेट किया जाता है।"
+
+#: james-seo-auto-linker-admin.php:107
+msgid "Where to Process Links"
+msgstr "लिंक कहाँ संसाधित करें"
+
+#: james-seo-auto-linker-admin.php:111
+msgid "Choose where James SEO Auto Linker should automatically create links."
+msgstr "चुनें कि James SEO Auto Linker को स्वचालित रूप से लिंक कहाँ बनाने चाहिए।"
+
+#: james-seo-auto-linker-admin.php:117
+msgid "Posts"
+msgstr "पोस्ट"
+
+#: james-seo-auto-linker-admin.php:128
+msgid "Enable auto-linking in posts"
+msgstr "पोस्ट में ऑटो-लिंकिंग सक्षम करें"
+
+#: james-seo-auto-linker-admin.php:132
+msgid "Note: Posts will not link to themselves to prevent over-optimization."
+msgstr "नोट: पोस्ट ओवर-ऑप्टिमाइज़ेशन को रोकने के लिए खुद से लिंक नहीं करेंगे।"
+
+#: james-seo-auto-linker-admin.php:138
+msgid "Pages"
+msgstr "पेज"
+
+#: james-seo-auto-linker-admin.php:149
+msgid "Enable auto-linking in pages"
+msgstr "पेजों में ऑटो-लिंकिंग सक्षम करें"
+
+#: james-seo-auto-linker-admin.php:153
+msgid "Note: Pages will not link to themselves to prevent over-optimization."
+msgstr "नोट: पेज खुद से लिंक नहीं होंगे।"
+
+#: james-seo-auto-linker-admin.php:169
+msgid "Comments"
+msgstr "टिप्पणियाँ"
+
+#: james-seo-auto-linker-admin.php:173
+msgid "Enable auto-linking in comments"
+msgstr "टिप्पणियों में ऑटो-लिंकिंग सक्षम करें"
+
+#: james-seo-auto-linker-admin.php:177
+msgid "May impact performance on posts with many comments."
+msgstr "कई टिप्पणियों वाले पोस्ट पर प्रदर्शन को प्रभावित कर सकता है।"
+
+#: james-seo-auto-linker-admin.php:191
+msgid "RSS Feeds"
+msgstr "RSS फ़ीड"
+
+#: james-seo-auto-linker-admin.php:196
+msgid "Enable auto-linking in RSS feeds"
+msgstr "RSS फ़ीड में ऑटो-लिंकिंग सक्षम करें"
+
+#: james-seo-auto-linker-admin.php:199
+msgid "Embed links in all posts in your RSS feed according to other settings."
+msgstr "अन्य सेटिंग्स के अनुसार अपने RSS फ़ीड के सभी पोस्ट में लिंक एम्बेड करें।"
+
+#: james-seo-auto-linker-admin.php:213
+msgid "Link Limits"
+msgstr "लिंक सीमाएँ"
+
+#: james-seo-auto-linker-admin.php:217
+msgid "Control the maximum number of links to prevent over-optimization."
+msgstr "ओवर-ऑप्टिमाइज़ेशन को रोकने के लिए लिंक की अधिकतम संख्या को नियंत्रित करें।"
+
+#: james-seo-auto-linker-admin.php:224
+msgid "Max Total Links"
+msgstr "अधिकतम कुल लिंक"
+
+#: james-seo-auto-linker-admin.php:227
+msgid "Maximum number of different links per post. Set to 0 for unlimited."
+msgstr "प्रति पोस्ट विभिन्न लिंक की अधिकतम संख्या। असीमित के लिए 0 पर सेट करें।"
+
+#: james-seo-auto-linker-admin.php:233
+msgid "Max Per Keyword"
+msgstr "अधिकतम प्रति कीवर्ड"
+
+#: james-seo-auto-linker-admin.php:236
+msgid "Maximum links created for the same keyword. Set to 0 for unlimited."
+msgstr "एक ही कीवर्ड के लिए बनाए गए अधिकतम लिंक। असीमित के लिए 0 पर सेट करें।"
+
+#: james-seo-auto-linker-admin.php:242
+msgid "Max Same URLs"
+msgstr "अधिकतम समान URL"
+
+#: james-seo-auto-linker-admin.php:246
+msgid "Limit links to the same URL. Works when \"Max Per Keyword\" is set to 1. Set to 0 for unlimited."
+msgstr "समान URL के लिंक सीमित करें। तब काम करता है जब \"अधिकतम प्रति कीवर्ड\" 1 पर सेट हो।"
+
+#: james-seo-auto-linker-admin.php:270
+msgid "Case Sensitivity"
+msgstr "केस संवेदनशीलता"
+
+#: james-seo-auto-linker-admin.php:280
+msgid "Enable case-sensitive matching"
+msgstr "केस-संवेदनशील मिलान सक्षम करें"
+
+#: james-seo-auto-linker-admin.php:283
+msgid "When enabled, \"WordPress\" and \"wordpress\" will be treated as different keywords."
+msgstr "सक्षम होने पर, \"WordPress\" और \"wordpress\" को अलग-अलग कीवर्ड माना जाएगा।"
+
+#: james-seo-auto-linker-admin.php:295
+msgid "Exclusions"
+msgstr "बहिष्करण"
+
+#: james-seo-auto-linker-admin.php:299
+msgid "Prevent linking in specific locations or for specific keywords."
+msgstr "विशिष्ट स्थानों या विशिष्ट कीवर्ड के लिए लिंकिंग रोकें।"
+
+#: james-seo-auto-linker-admin.php:305
+msgid "Headings"
+msgstr "हेडिंग"
+
+#: james-seo-auto-linker-admin.php:315
+msgid "Exclude links in headings (H1-H6)"
+msgstr "हेडिंग (H1-H6) में लिंक शामिल न करें"
+
+#: james-seo-auto-linker-admin.php:318
+msgid "Recommended for better SEO and readability."
+msgstr "बेहतर SEO और पठनीयता के लिए अनुशंसित।"
+
+#: james-seo-auto-linker-admin.php:324
+msgid "Ignore Posts/Pages"
+msgstr "पोस्ट/पेज को अनदेखा करें"
+
+#: james-seo-auto-linker-admin.php:339
+msgid "Prevent automatic linking on specific posts or pages. Separate by comma (ID, slug, or name)."
+msgstr "विशिष्ट पोस्ट या पेजों पर स्वचालित लिंकिंग रोकें। अल्पविराम से अलग करें।"
+
+#: james-seo-auto-linker-admin.php:345
+msgid "Ignore Keywords"
+msgstr "कीवर्ड अनदेखा करें"
+
+#: james-seo-auto-linker-admin.php:360
+msgid "Words or phrases to exclude from automatic linking. Separate by comma."
+msgstr "स्वचालित लिंकिंग से बाहर करने के लिए शब्द या वाक्यांश। अल्पविराम से अलग करें।"
+
+#: james-seo-auto-linker-admin.php:365
+msgid "Single Posts/Pages Only"
+msgstr "केवल सिंगल पोस्ट/पेज"
+
+#: james-seo-auto-linker-admin.php:375
+msgid "Only process on individual post/page views"
+msgstr "केवल व्यक्तिगत पोस्ट/पेज दृश्यों पर संसाधित करें"
+
+#: james-seo-auto-linker-admin.php:378
+msgid "Reduces database load by skipping home page, archives, and category pages."
+msgstr "होम पेज, अभिलेखागार और श्रेणी पृष्ठों को छोड़कर डेटाबेस लोड कम करता है।"
+
+#: james-seo-auto-linker-admin.php:390
+msgid "Link Targets"
+msgstr "लिंक लक्ष्य"
+
+#: james-seo-auto-linker-admin.php:394
+msgid "The targets James SEO Auto Linker should consider. The match will be based on post/page title or category/tag name, case insensitive."
+msgstr "लक्ष्य जिन पर James SEO Auto Linker को विचार करना चाहिए।"
+
+#: james-seo-auto-linker-admin.php:400
+msgid "Categories"
+msgstr "श्रेणियाँ"
+
+#: james-seo-auto-linker-admin.php:410
+msgid "Enable to link internal links to categories."
+msgstr "श्रेणियों के लिए आंतरिक लिंक लिंक करने के लिए सक्षम करें।"
+
+#: james-seo-auto-linker-admin.php:415
+msgid "Tags"
+msgstr "टैग"
+
+#: james-seo-auto-linker-admin.php:425
+msgid "Enable to link internal links to tags."
+msgstr "टैग के लिए आंतरिक लिंक लिंक करने के लिए सक्षम करें।"
+
+#: james-seo-auto-linker-admin.php:430
+msgid "Minimum categories/tags"
+msgstr "न्यूनतम श्रेणियाँ/टैग"
+
+#: james-seo-auto-linker-admin.php:440
+msgid "Only link categories and tags that have been used the above number of times or more."
+msgstr "केवल उन श्रेणियों और टैग को लिंक करें जिनका उपयोग उपरोक्त संख्या या उससे अधिक बार किया गया है।"
+
+#: james-seo-auto-linker-admin.php:444
+msgid "Add nofollow"
+msgstr "nofollow जोड़ें"
+
+#: james-seo-auto-linker-admin.php:449
+msgid "Add nofollow to external links"
+msgstr "बाहरी लिंक में nofollow जोड़ें"
+
+#: james-seo-auto-linker-admin.php:459
+msgid "Add a nofollow attribute to the external links."
+msgstr "बाहरी लिंक में nofollow विशेषता जोड़ता है।"
+
+#: james-seo-auto-linker-admin.php:463
+msgid "Open in new window"
+msgstr "नई विंडो में खोलें"
+
+#: james-seo-auto-linker-admin.php:469
+msgid "Open external links in a new window"
+msgstr "बाहरी लिंक नई विंडो में खोलें"
+
+#: james-seo-auto-linker-admin.php:479
+msgid "Open the external links in a new window."
+msgstr "बाहरी लिंक एक नई विंडो में खोलता है।"
+
+#: james-seo-auto-linker-admin.php:487
+msgid "Link Cache"
+msgstr "लिंक कैश"
+
+#: james-seo-auto-linker-admin.php:497
+msgid "Clear link cache"
+msgstr "लिंक कैश साफ़ करें"
+
+#: james-seo-auto-linker-admin.php:500
+msgid "Clears the temporary link cache stored in WordPress Transients. Use this if links are not reflecting your latest settings."
+msgstr "वर्डप्रेस ट्रांसिएंट्स में संग्रहीत अस्थायी लिंक कैश को साफ़ करता है।"
+
+#: james-seo-auto-linker-admin.php:518
+msgid "About the Author"
+msgstr "लेखक के बारे में"
+
+#: james-seo-auto-linker-admin.php:527
+msgid "Like what I do? %sBuy me a drink%s 🍺"
+msgstr "मेरा काम पसंद है? %sमेरे लिए एक ड्रिंक खरीदें%s 🍺"
+
+#: james-seo-auto-linker-admin.php:543
+msgid "Frequently Asked Questions"
+msgstr "अक्सर पूछे जाने वाले प्रश्न"
+
+#: james-seo-auto-linker-admin.php:547
+msgid "Does this plugin affect site performance?"
+msgstr "क्या यह प्लगइन साइट के प्रदर्शन को प्रभावित करता है?"
+
+#: james-seo-auto-linker-admin.php:548
+msgid "No, James SEO Auto Linker uses a smart Transient caching system to ensure your site stays fast by minimizing database queries."
+msgstr "नहीं, James SEO Auto Linker एक स्मार्ट कैशिंग सिस्टम का उपयोग करता है।"
+
+#: james-seo-auto-linker-admin.php:551
+msgid "Can I link to external websites?"
+msgstr "क्या मैं बाहरी वेबसाइटों से लिंक कर सकता हूँ?"
+
+#: james-seo-auto-linker-admin.php:552
+msgid "Yes! In the \"Custom Keywords\" section, you can specify any URL, including external sites."
+msgstr "हाँ! आप किसी भी URL को निर्दिष्ट कर सकते हैं।"
+
+#: james-seo-auto-linker-admin.php:555
+msgid "Can I prevent certain words from being linked?"
+msgstr "क्या मैं कुछ शब्दों को लिंक होने से रोक सकता हूँ?"
+
+#: james-seo-auto-linker-admin.php:556
+msgid "Yes, you can add words or phrases to the \"Ignore Keywords\" list under Exclusions to exclude them."
+msgstr "हाँ, उन्हें बहिष्कार के तहत \"कीवर्ड अनदेखा करें\" सूची में जोड़ें।"
+
+#: james-seo-auto-linker-admin.php:559
+msgid "How do I disable auto-linking for a single post?"
+msgstr "मैं किसी एक पोस्ट के लिए ऑटो-लिंकिंग कैसे अक्षम करूँ?"
+
+#: james-seo-auto-linker-admin.php:560
+msgid "When editing a post or page in Gutenberg, look for the \"SEO Auto Linker\" panel in the sidebar to find the disable toggle."
+msgstr "Gutenberg में \"SEO Auto Linker\" पैनल देखें।"
+
+#: src/Admin.php:38
+msgid "Settings saved successfully."
+msgstr "सेटिंग्स सफलतापूर्वक सहेजी गईं।"
+
+#: src/Admin.php:123
+msgid "Are you sure you want to clear the link cache?"
+msgstr "क्या आप वाकई लिंक कैश साफ़ करना चाहते हैं?"
+
+#: src/Admin.php:128
+msgid "Cache cleared successfully!"
+msgstr "कैश सफलतापूर्वक साफ़ किया गया!"
