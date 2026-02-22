@@ -21,6 +21,7 @@ class Admin
         add_action('admin_menu', [$this, 'add_menu_page']);
         add_action('admin_enqueue_scripts', [$this, 'enqueue_assets']);
         add_action('wp_ajax_seo_auto_linker_clear_cache', [$this, 'ajax_clear_cache']);
+        add_filter('plugin_action_links_' . plugin_basename(dirname(__DIR__, 1) . '/james-seo-auto-linker.php'), [$this, 'add_action_links']);
     }
 
     public function add_menu_page(): void
@@ -32,6 +33,15 @@ class Admin
             'james-seo-auto-linker',
             [$this, 'render_settings_page']
         );
+    }
+
+    public function add_action_links($links): array
+    {
+        $settings_link = '<a href="' . admin_url('options-general.php?page=james-seo-auto-linker') . '">' . __('Settings', 'james-seo-auto-linker') . '</a>';
+        $blog_link = '<a href="https://10l0.com" target="_blank">' . __('Blog', 'james-seo-auto-linker') . '</a>';
+        array_unshift($links, $settings_link);
+        $links[] = $blog_link;
+        return $links;
     }
 
     public function render_settings_page(): void

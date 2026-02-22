@@ -359,3 +359,11 @@ msgstr "Sei sicuro di voler svuotare la cache dei link?"
 #: src/Admin.php:128
 msgid "Cache cleared successfully!"
 msgstr "Cache svuotata con successo!"
+
+#: src/Admin.php:37
+msgid "Settings"
+msgstr "Impostazioni"
+
+#: src/Admin.php:38
+msgid "Blog"
+msgstr "Blog"

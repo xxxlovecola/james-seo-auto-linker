@@ -359,3 +359,11 @@ msgstr "Вы уверены, что хотите очистить кэш ссы�
 #: src/Admin.php:128
 msgid "Cache cleared successfully!"
 msgstr "Кэш успешно очищен!"
+
+#: src/Admin.php:37
+msgid "Settings"
+msgstr "Настройки"
+
+#: src/Admin.php:38
+msgid "Blog"
+msgstr "Блог"

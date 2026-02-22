@@ -359,3 +359,11 @@ msgstr "क्या आप वाकई लिंक कैश साफ़ क
 #: src/Admin.php:128
 msgid "Cache cleared successfully!"
 msgstr "कैश सफलतापूर्वक साफ़ किया गया!"
+
+#: src/Admin.php:37
+msgid "Settings"
+msgstr "सेटिंग्स"
+
+#: src/Admin.php:38
+msgid "Blog"
+msgstr "ब्लॉग"

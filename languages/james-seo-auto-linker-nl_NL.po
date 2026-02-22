@@ -359,3 +359,11 @@ msgstr "Weet u zeker dat u de link cache wilt wissen?"
 #: src/Admin.php:128
 msgid "Cache cleared successfully!"
 msgstr "Cache succesvol gewist!"
+
+#: src/Admin.php:37
+msgid "Settings"
+msgstr "Instellingen"
+
+#: src/Admin.php:38
+msgid "Blog"
+msgstr "Blog"

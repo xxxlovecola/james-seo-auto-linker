@@ -359,3 +359,11 @@ msgstr "リンクキャッシュをクリアしてもよろしいですか？"
 #: src/Admin.php:128
 msgid "Cache cleared successfully!"
 msgstr "キャッシュが正常にクリアされました！"
+
+#: src/Admin.php:37
+msgid "Settings"
+msgstr "設定"
+
+#: src/Admin.php:38
+msgid "Blog"
+msgstr "ブログ"

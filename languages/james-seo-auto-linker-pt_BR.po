@@ -359,3 +359,11 @@ msgstr "Tem certeza que deseja limpar o cache de links?"
 #: src/Admin.php:128
 msgid "Cache cleared successfully!"
 msgstr "Cache limpo com sucesso!"
+
+#: src/Admin.php:37
+msgid "Settings"
+msgstr "Configurações"
+
+#: src/Admin.php:38
+msgid "Blog"
+msgstr "Blog"

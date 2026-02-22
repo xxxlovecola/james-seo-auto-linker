@@ -359,3 +359,11 @@ msgstr "您确定要清除链接缓存吗？"
 #: src/Admin.php:128
 msgid "Cache cleared successfully!"
 msgstr "缓存清除成功！"
+
+#: src/Admin.php:37
+msgid "Settings"
+msgstr "设置"
+
+#: src/Admin.php:38
+msgid "Blog"
+msgstr "博客"
