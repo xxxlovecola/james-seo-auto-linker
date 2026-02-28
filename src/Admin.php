@@ -19,9 +19,26 @@ class Admin
     public function init(): void
     {
         add_action('admin_menu', [$this, 'add_menu_page']);
+        add_action('admin_init', [$this, 'handle_form_submission']);
         add_action('admin_enqueue_scripts', [$this, 'enqueue_assets']);
         add_action('wp_ajax_seo_auto_linker_clear_cache', [$this, 'ajax_clear_cache']);
         add_filter('plugin_action_links_' . plugin_basename(dirname(__DIR__, 1) . '/james-seo-auto-linker.php'), [$this, 'add_action_links']);
+    }
+
+    public function handle_form_submission(): void
+    {
+        // Only trigger on our page
+        if (!isset($_GET['page']) || $_GET['page'] !== 'james-seo-auto-linker') {
+            return;
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['submitted']) || isset($_POST['save_settings']))) {
+            $this->handle_save();
+
+            // Redirect to avoid resubmission and show success message
+            wp_safe_redirect(add_query_arg('settings-updated', 'true', admin_url('options-general.php?page=james-seo-auto-linker')));
+            exit;
+        }
     }
 
     public function add_menu_page(): void
@@ -46,15 +63,6 @@ class Admin
 
     public function render_settings_page(): void
     {
-        // Handle saving
-        if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST['submitted']) || isset($_POST['save_settings']))) {
-            $this->handle_save();
-
-            // Redirect to avoid resubmission and show success message
-            wp_safe_redirect(add_query_arg('settings-updated', 'true', admin_url('options-general.php?page=james-seo-auto-linker')));
-            exit;
-        }
-
         if (isset($_GET['settings-updated']) && $_GET['settings-updated'] === 'true') {
             echo '<div class="updated notice is-dismissible"><p>' . esc_html__('Settings saved successfully.', 'james-seo-auto-linker') . '</p></div>';
         }
