@@ -72,7 +72,8 @@ class Processor
 
         // Settings
         $max_links = max(0, (int) $this->settings->get('maxlinks', 3));
-        $max_single = max(-1, (int) $this->settings->get('maxsingle', 1));
+        $max_single_setting = (int) $this->settings->get('maxsingle', 1);
+        $max_single = $max_single_setting === 0 ? -1 : max(1, $max_single_setting);
         $max_single_url = max(0, (int) $this->settings->get('maxsingleurl', 1));
         $min_usage = max(1, (int) $this->settings->get('minusage', 1));
 
@@ -83,7 +84,7 @@ class Processor
 
         $case_modifier = $this->settings->get('casesens') ? '' : 'i';
         $regex_template = '/(?<![\p{L}\p{N}])($name)(?![\p{L}\p{N}])/msu' . $case_modifier;
-        $strpos_func = $this->settings->get('casesens') ? 'strpos' : 'stripos';
+        $strpos_func = $this->settings->get('casesens') ? 'mb_strpos' : 'mb_stripos';
 
         $text = ' ' . $text . ' ';
 
@@ -280,10 +281,13 @@ class Processor
     {
         global $wpdb;
         $post_types = [];
-        if ($this->settings->get('lposts')) $post_types[] = "'post'";
-        if ($this->settings->get('lpages')) $post_types[] = "'page'";
-        
-        if (empty($post_types)) return [];
+        if ($this->settings->get('lposts'))
+            $post_types[] = "'post'";
+        if ($this->settings->get('lpages'))
+            $post_types[] = "'page'";
+
+        if (empty($post_types))
+            return [];
         $post_types_sql = implode(',', $post_types);
 
         return $wpdb->get_results($wpdb->prepare(
@@ -400,7 +404,8 @@ class Processor
     public function fetch_remote_keywords_cron(): void
     {
         $url = $this->settings->get('customkey_url');
-        if (!$url) return;
+        if (!$url)
+            return;
 
         $response = wp_remote_get($url, ['timeout' => 15]);
         if (!is_wp_error($response) && wp_remote_retrieve_response_code($response) === 200) {
