@@ -106,6 +106,9 @@ class Processor
 
         $all_keywords = $this->collect_all_keywords($current_url, $current_title, $ignored_keywords, $min_usage);
 
+        $text_normalized = $this->normalize_for_search($text);
+        $text_changed = false;
+
         // Process all keywords in optimized order
         foreach ($all_keywords as $item) {
             if ($max_links && $links_added >= $max_links)
@@ -113,8 +116,12 @@ class Processor
             if ($max_single_url && ($url_counts[$item['url']] ?? 0) >= $max_single_url)
                 continue;
 
+            if ($text_changed) {
+                $text_normalized = $this->normalize_for_search($text);
+                $text_changed = false;
+            }
+
             $keyword_normalized = $this->normalize_for_search($item['keyword']);
-            $text_normalized = $this->normalize_for_search($text);
             if ($strpos_func($text_normalized, $keyword_normalized) === false)
                 continue;
 
@@ -146,6 +153,7 @@ class Processor
 
             $regex = str_replace('$name', $keyword_escaped, $regex_template);
 
+            $count = 0;
             $text = preg_replace_callback($regex, function ($matches) use (&$placeholders, &$links_added, &$url_counts, $item, $max_links, $max_single_url) {
                 // Check total limits inside callback
                 if ($max_links && $links_added >= $max_links) {
@@ -164,7 +172,11 @@ class Processor
                 $placeholder = '{JSAL_BLOCK_' . count($placeholders) . '}';
                 $placeholders[$placeholder] = $link;
                 return $placeholder;
-            }, $text, $max_single);
+            }, $text, $max_single, $count);
+
+            if ($count > 0) {
+                $text_changed = true;
+            }
         }
 
         // Restore protected HTML tags
@@ -267,8 +279,15 @@ class Processor
     private function fetch_posts(): array
     {
         global $wpdb;
+        $post_types = [];
+        if ($this->settings->get('lposts')) $post_types[] = "'post'";
+        if ($this->settings->get('lpages')) $post_types[] = "'page'";
+        
+        if (empty($post_types)) return [];
+        $post_types_sql = implode(',', $post_types);
+
         return $wpdb->get_results($wpdb->prepare(
-            "SELECT post_title, ID, post_type FROM {$wpdb->posts} WHERE post_status = %s AND LENGTH(post_title) > %d ORDER BY LENGTH(post_title) DESC LIMIT %d",
+            "SELECT post_title, ID, post_type FROM {$wpdb->posts} WHERE post_status = %s AND post_type IN ({$post_types_sql}) AND LENGTH(post_title) > %d ORDER BY LENGTH(post_title) DESC LIMIT %d",
             'publish',
             1,
             2000
@@ -295,14 +314,10 @@ class Processor
         if ($url = $this->settings->get('customkey_url')) {
             $last_fetch = (int) $this->settings->get('customkey_url_datetime', 0);
             if (time() - $last_fetch > DAY_IN_SECONDS) {
-                $response = wp_remote_get($url, ['timeout' => 10]);
-                if (!is_wp_error($response)) {
-                    $body = sanitize_textarea_field(strip_tags(wp_remote_retrieve_body($response)));
-                    $this->settings->update([
-                        'customkey_url_value' => $body,
-                        'customkey_url_datetime' => time()
-                    ]);
+                if (!wp_next_scheduled('jsal_fetch_custom_keywords')) {
+                    wp_schedule_single_event(time(), 'jsal_fetch_custom_keywords');
                 }
+                $this->settings->update(['customkey_url_datetime' => time()]);
             }
             $text .= "\n" . (string) $this->settings->get('customkey_url_value', '');
         }
@@ -380,5 +395,20 @@ class Processor
     private function explode_trim(string $separator, string $text): array
     {
         return array_filter(array_map('trim', explode($separator, $text)));
+    }
+
+    public function fetch_remote_keywords_cron(): void
+    {
+        $url = $this->settings->get('customkey_url');
+        if (!$url) return;
+
+        $response = wp_remote_get($url, ['timeout' => 15]);
+        if (!is_wp_error($response) && wp_remote_retrieve_response_code($response) === 200) {
+            $body = sanitize_textarea_field(strip_tags(wp_remote_retrieve_body($response)));
+            $this->settings->update([
+                'customkey_url_value' => $body,
+                'customkey_url_datetime' => time()
+            ]);
+        }
     }
 }

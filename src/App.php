@@ -53,6 +53,9 @@ class App
         $this->admin->init();
         $this->gutenberg->init();
 
+        // Cron hook
+        add_action('jsal_fetch_custom_keywords', [$this->processor, 'fetch_remote_keywords_cron']);
+
         // Translation
         add_action('init', function () {
             load_plugin_textdomain('james-seo-auto-linker', false, dirname(plugin_basename(__FILE__), 2) . '/languages/');

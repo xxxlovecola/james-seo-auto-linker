@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 		if (!liData.includes(not_us) && !liData.includes('themes') && liData.includes(checker_niddle))
         {
 			//console.log($(this).text());
-			$(this).find('ul').append('<li><a href="options-general.php?page=james-seo-auto-linker.php">James SEO Auto Linker</a></li>');
+			$(this).find('ul').append('<li><a href="options-general.php?page=james-seo-auto-linker">James SEO Auto Linker</a></li>');
 		}
 	});
 });
