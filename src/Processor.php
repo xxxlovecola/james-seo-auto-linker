@@ -66,7 +66,7 @@ class Processor
         $current_title = '';
         $current_url = '';
         if (!$is_comment && isset($post->post_type)) {
-            $current_title = $this->settings->get('casesens') ? $post->post_title : mb_strtolower($post->post_title);
+            $current_title = $this->settings->get('casesens') ? $post->post_title : mb_strtolower($post->post_title, 'UTF-8');
             $current_url = trailingslashit(get_permalink($post->ID));
         }
 
@@ -80,7 +80,7 @@ class Processor
         $links_added = 0;
         $url_counts = [];
         $ignored_keywords = array_map(function ($kw) {
-            return $this->settings->get('casesens') ? $kw : mb_strtolower($kw);
+            return $this->settings->get('casesens') ? $kw : mb_strtolower($kw, 'UTF-8');
         }, $this->explode_trim(',', (string) $this->settings->get('ignore', '')));
 
 
@@ -125,7 +125,7 @@ class Processor
             }
 
             $keyword_normalized = $this->normalize_for_search($item['keyword']);
-            if ($strpos_func($text_normalized, $keyword_normalized) === false)
+            if ($strpos_func($text_normalized, $keyword_normalized, 0, 'UTF-8') === false)
                 continue;
 
             $keyword_raw = html_entity_decode($item['keyword'], ENT_QUOTES | ENT_HTML5);
@@ -200,7 +200,7 @@ class Processor
         // 1. Custom Keywords
         $custom_keywords = $this->parse_custom_keywords();
         foreach ($custom_keywords as $keyword => $url) {
-            $keyword_lower = $this->settings->get('casesens') ? $keyword : mb_strtolower($keyword);
+            $keyword_lower = $this->settings->get('casesens') ? $keyword : mb_strtolower($keyword, 'UTF-8');
             if (in_array($keyword_lower, $ignored_keywords, true))
                 continue;
             if (trailingslashit($url) === $current_url)
@@ -224,7 +224,7 @@ class Processor
                 if (!$is_valid)
                     continue;
 
-                $title_check = $this->settings->get('casesens') ? $post_item->post_title : mb_strtolower($post_item->post_title);
+                $title_check = $this->settings->get('casesens') ? $post_item->post_title : mb_strtolower($post_item->post_title, 'UTF-8');
                 if ($title_check === $current_title || in_array($title_check, $ignored_keywords, true))
                     continue;
 
@@ -243,7 +243,7 @@ class Processor
             if ($this->settings->get($setting)) {
                 $terms = $this->get_cached_data("{$tax}_{$min_usage}", fn() => $this->fetch_terms($tax, $min_usage));
                 foreach ($terms as $term) {
-                    $term_check = $this->settings->get('casesens') ? $term->name : mb_strtolower($term->name);
+                    $term_check = $this->settings->get('casesens') ? $term->name : mb_strtolower($term->name, 'UTF-8');
                     if (in_array($term_check, $ignored_keywords, true))
                         continue;
 
