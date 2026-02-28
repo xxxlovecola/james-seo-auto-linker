@@ -66,7 +66,7 @@ class Processor
         $current_title = '';
         $current_url = '';
         if (!$is_comment && isset($post->post_type)) {
-            $current_title = $this->settings->get('casesens') ? $post->post_title : strtolower($post->post_title);
+            $current_title = $this->settings->get('casesens') ? $post->post_title : mb_strtolower($post->post_title);
             $current_url = trailingslashit(get_permalink($post->ID));
         }
 
@@ -79,7 +79,9 @@ class Processor
 
         $links_added = 0;
         $url_counts = [];
-        $ignored_keywords = $this->explode_trim(',', (string) $this->settings->get('ignore', ''));
+        $ignored_keywords = array_map(function ($kw) {
+            return $this->settings->get('casesens') ? $kw : mb_strtolower($kw);
+        }, $this->explode_trim(',', (string) $this->settings->get('ignore', '')));
 
 
         $case_modifier = $this->settings->get('casesens') ? '' : 'i';
@@ -198,7 +200,7 @@ class Processor
         // 1. Custom Keywords
         $custom_keywords = $this->parse_custom_keywords();
         foreach ($custom_keywords as $keyword => $url) {
-            $keyword_lower = $this->settings->get('casesens') ? $keyword : strtolower($keyword);
+            $keyword_lower = $this->settings->get('casesens') ? $keyword : mb_strtolower($keyword);
             if (in_array($keyword_lower, $ignored_keywords, true))
                 continue;
             if (trailingslashit($url) === $current_url)
@@ -222,7 +224,7 @@ class Processor
                 if (!$is_valid)
                     continue;
 
-                $title_check = $this->settings->get('casesens') ? $post_item->post_title : strtolower($post_item->post_title);
+                $title_check = $this->settings->get('casesens') ? $post_item->post_title : mb_strtolower($post_item->post_title);
                 if ($title_check === $current_title || in_array($title_check, $ignored_keywords, true))
                     continue;
 
@@ -241,7 +243,7 @@ class Processor
             if ($this->settings->get($setting)) {
                 $terms = $this->get_cached_data("{$tax}_{$min_usage}", fn() => $this->fetch_terms($tax, $min_usage));
                 foreach ($terms as $term) {
-                    $term_check = $this->settings->get('casesens') ? $term->name : strtolower($term->name);
+                    $term_check = $this->settings->get('casesens') ? $term->name : mb_strtolower($term->name);
                     if (in_array($term_check, $ignored_keywords, true))
                         continue;
 
@@ -282,20 +284,20 @@ class Processor
         global $wpdb;
         $post_types = [];
         if ($this->settings->get('lposts'))
-            $post_types[] = "'post'";
+            $post_types[] = 'post';
         if ($this->settings->get('lpages'))
-            $post_types[] = "'page'";
+            $post_types[] = 'page';
 
         if (empty($post_types))
             return [];
-        $post_types_sql = implode(',', $post_types);
 
-        return $wpdb->get_results($wpdb->prepare(
-            "SELECT post_title, ID, post_type FROM {$wpdb->posts} WHERE post_status = %s AND post_type IN ({$post_types_sql}) AND LENGTH(post_title) > %d ORDER BY LENGTH(post_title) DESC LIMIT %d",
-            'publish',
-            1,
-            2000
-        )) ?: [];
+        $placeholders = array_fill(0, count($post_types), '%s');
+        $placeholders_sql = implode(',', $placeholders);
+        $args = array_merge(['publish'], $post_types, [1, 2000]);
+
+        $query = "SELECT post_title, ID, post_type FROM {$wpdb->posts} WHERE post_status = %s AND post_type IN ({$placeholders_sql}) AND LENGTH(post_title) > %d ORDER BY LENGTH(post_title) DESC LIMIT %d";
+
+        return $wpdb->get_results($wpdb->prepare($query, ...$args)) ?: [];
     }
 
     private function fetch_terms(string $tax, int $min_usage): array

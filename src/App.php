@@ -44,10 +44,11 @@ class App
         }
 
         // Cache invalidation
-        add_action('create_category', [$this->cache, 'clear_all']);
-        add_action('edit_category', [$this->cache, 'clear_all']);
-        add_action('edit_post', [$this->cache, 'clear_all']);
+        add_action('created_term', [$this->cache, 'clear_all']);
+        add_action('edited_term', [$this->cache, 'clear_all']);
+        add_action('delete_term', [$this->cache, 'clear_all']);
         add_action('save_post', [$this->cache, 'clear_all']);
+        add_action('deleted_post', [$this->cache, 'clear_all']);
 
         // Components initialization
         $this->admin->init();
