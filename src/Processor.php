@@ -100,7 +100,7 @@ class Processor
 
 
         $case_modifier = $this->settings->get('casesens') ? '' : 'i';
-        $regex_template = '/(?<![\p{L}\p{N}])($name)(?![\p{L}\p{N}])/msu' . $case_modifier;
+        $regex_template = '/(?<![\p{L}\p{M}\p{N}])($name)(?![\p{L}\p{M}\p{N}])/msu' . $case_modifier;
         $strpos_func = $this->settings->get('casesens') ? 'mb_strpos' : 'mb_stripos';
 
         $text = ' ' . $text . ' ';
