@@ -340,7 +340,11 @@ class Processor
                 if ($last_comma === false)
                     continue;
                 $url = trim(substr($line, $last_comma + 1));
-                $keyword = trim(substr($line, 0, $last_comma));
+
+                // Trim individual grouped keywords properly
+                $keyword_parts = array_map('trim', explode(',', substr($line, 0, $last_comma)));
+                $keyword = implode(',', array_filter($keyword_parts));
+
                 if (!empty($keyword) && !empty($url))
                     $keywords[$keyword] = esc_url_raw($url);
             } else {
