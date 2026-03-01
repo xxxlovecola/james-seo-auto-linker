@@ -35,25 +35,40 @@ class Processor
      */
     private function process_text(string $text, bool $is_comment = false): string
     {
-        global $post;
+        $post = get_post();
+
+        if (!$post) {
+            return $text;
+        }
 
         // Early exits
         if (is_feed() && !$this->settings->get('allowfeed')) {
             return $text;
         }
 
-        if ($this->settings->get('onlysingle') && !(is_single() || is_page())) {
-            return $text;
+        if ($this->settings->get('onlysingle')) {
+            // Instead of `!is_single() && !is_page()`, we check if the current post is the main queried object.
+            // This prevents silent failures in page builders, REST APIs, or custom loops 
+            // where `is_singular()` returns false but the post is still genuinely the main subject.
+            if (!is_singular() && get_queried_object_id() !== $post->ID && !wp_is_json_request() && !wp_doing_ajax()) {
+                return $text;
+            }
         }
 
-        // Check ignored posts
+        // Check ignored posts directly against the real post object
         $ignored_posts = $this->explode_trim(',', (string) $this->settings->get('ignorepost', ''));
-        if (is_page($ignored_posts) || is_single($ignored_posts)) {
-            return $text;
+        if (!empty($ignored_posts)) {
+            if (
+                in_array((string) $post->ID, $ignored_posts, true) ||
+                in_array($post->post_name, $ignored_posts, true) ||
+                in_array($post->post_title, $ignored_posts, true)
+            ) {
+                return $text;
+            }
         }
 
         // Check post type permissions
-        if (!$is_comment && isset($post->post_type)) {
+        if (!$is_comment) {
             if ($post->post_type === 'post' && !$this->settings->get('post')) {
                 return $text;
             }
@@ -65,7 +80,7 @@ class Processor
         // Get current post info for self-linking prevention
         $current_title = '';
         $current_url = '';
-        if (!$is_comment && isset($post->post_type)) {
+        if (!$is_comment) {
             $current_title = $this->settings->get('casesens') ? $post->post_title : mb_strtolower($post->post_title, 'UTF-8');
             $current_url = trailingslashit(get_permalink($post->ID));
         }
