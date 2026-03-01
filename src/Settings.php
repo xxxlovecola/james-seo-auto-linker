@@ -9,6 +9,31 @@ class Settings
 {
     private string $option_name = 'JamesSEOAutoLinks';
     private array $options = [];
+    private array $defaults = [
+        'post' => 'on',
+        'page' => 'on',
+        'comment' => '',
+        'excludeheading' => 'on',
+        'lposts' => 'on',
+        'lpages' => 'on',
+        'lcats' => '',
+        'ltags' => '',
+        'ignore' => 'about',
+        'ignorepost' => 'contact',
+        'maxlinks' => 3,
+        'maxsingle' => 1,
+        'minusage' => 1,
+        'customkey' => '',
+        'customkey_preventduplicatelink' => false,
+        'customkey_url' => '',
+        'customkey_url_value' => '',
+        'customkey_url_datetime' => '',
+        'nofolo' => '',
+        'onlysingle' => 'on',
+        'casesens' => '',
+        'allowfeed' => '',
+        'maxsingleurl' => 1
+    ];
 
     public function __construct()
     {
@@ -28,7 +53,7 @@ class Settings
             return $this->options;
         }
 
-        return $this->options[$key] ?? $default;
+        return $this->options[$key] ?? $this->defaults[$key] ?? $default;
     }
 
     /**
@@ -51,39 +76,13 @@ class Settings
      */
     private function load_options(): array
     {
-        $defaults = [
-            'post' => 'on',
-            'page' => 'on',
-            'comment' => '',
-            'excludeheading' => 'on',
-            'lposts' => 'on',
-            'lpages' => 'on',
-            'lcats' => '',
-            'ltags' => '',
-            'ignore' => 'about',
-            'ignorepost' => 'contact',
-            'maxlinks' => 3,
-            'maxsingle' => 1,
-            'minusage' => 1,
-            'customkey' => '',
-            'customkey_preventduplicatelink' => false,
-            'customkey_url' => '',
-            'customkey_url_value' => '',
-            'customkey_url_datetime' => '',
-            'nofolo' => '',
-            'onlysingle' => 'on',
-            'casesens' => '',
-            'allowfeed' => '',
-            'maxsingleurl' => 1
-        ];
-
         $saved = get_option($this->option_name);
 
         if (!empty($saved) && is_array($saved)) {
-            return array_merge($defaults, $saved);
+            return array_merge($this->defaults, $saved);
         }
 
-        return $defaults;
+        return $this->defaults;
     }
 
     public function get_option_name(): string
