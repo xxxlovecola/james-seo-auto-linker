@@ -131,6 +131,10 @@ class Processor
             $keyword_raw = html_entity_decode($item['keyword'], ENT_QUOTES | ENT_HTML5);
             $keyword_escaped = preg_quote($keyword_raw, '/');
 
+            if ($item['is_grouped']) {
+                $keyword_escaped = str_replace(',', '|', $keyword_escaped);
+            }
+
             // Relaxed matching for spaces (normal space, non-breaking space, etc.)
             $keyword_escaped = str_replace(' ', '(?:\s|&nbsp;|&#160;)+', $keyword_escaped);
 
@@ -149,10 +153,6 @@ class Processor
             // Relaxed matching for ampersands (must be done last to avoid breaking other entities)
             $amp_regex = '(?:&|&amp;|&#038;|&#38;)';
             $keyword_escaped = str_replace('&', $amp_regex, $keyword_escaped);
-
-            if ($item['is_grouped']) {
-                $keyword_escaped = str_replace(',', '|', $keyword_escaped);
-            }
 
             $regex = str_replace('$name', $keyword_escaped, $regex_template);
 
