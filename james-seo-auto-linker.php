@@ -41,8 +41,8 @@ function james_seo_auto_linker_init()
     return \JamesSeoAutoLinker\App::get_instance();
 }
 
-// Start the app
-james_seo_auto_linker_init();
+// Start the app on plugins_loaded
+add_action('plugins_loaded', 'james_seo_auto_linker_init');
 
 /**
  * Activation Hook

@@ -129,12 +129,14 @@ class Admin
 
     public function enqueue_assets($hook): void
     {
+        // Enqueue the SEO menu hook script globally in wp-admin
+        wp_enqueue_script('seopluginjs', plugins_url('/js/set-link-for-seo-plugin.js', dirname(__DIR__, 1) . '/james-seo-auto-linker.php'), ['jquery'], '2.0', true);
+
         if (strpos($hook, 'james-seo-auto-linker') === false)
             return;
 
         wp_enqueue_script('tagsjs', plugins_url('/js/load.js', dirname(__DIR__, 1) . '/james-seo-auto-linker.php'), ['jquery'], '2.0', true);
         wp_enqueue_style('tagscss', plugins_url('/css/james-seo-auto-linker-style.css', dirname(__DIR__, 1) . '/james-seo-auto-linker.php'), [], '2.0');
-        wp_enqueue_script('seopluginjs', plugins_url('/js/set-link-for-seo-plugin.js', dirname(__DIR__, 1) . '/james-seo-auto-linker.php'), ['jquery'], '2.0', true);
     }
 
     public function ajax_clear_cache(): void
