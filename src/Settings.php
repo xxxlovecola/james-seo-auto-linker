@@ -38,6 +38,11 @@ class Settings
     public function __construct()
     {
         $this->options = $this->load_options();
+
+        // Bonus pro-level upgrade: Auto-heal the database if options row is missing
+        if (!get_option($this->option_name)) {
+            update_option($this->option_name, $this->defaults);
+        }
     }
 
     /**
